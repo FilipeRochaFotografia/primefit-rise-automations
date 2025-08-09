@@ -121,7 +121,7 @@ const Index = () => {
               </ul>
             </article>
             <div className="animate-fade-in">
-              <img src={compareImg} alt="Antes e depois: processos manuais vs automação por IA" className="w-full h-auto rounded-lg border border-border" loading="lazy" />
+              <img src={compareImg} alt="Antes | Depois" className="w-full h-auto rounded-lg border border-border" loading="lazy" />
             </div>
           </div>
         </section>
