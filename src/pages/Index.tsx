@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, Zap, MessageSquare, BarChart3, Rocket, Globe2, Layers, CalendarClock, Phone, Mail, ArrowRight } from "lucide-react";
+import { CheckCircle2, Zap, MessageSquare, BarChart3, Globe2, Layers, CalendarClock, Phone, Mail, ArrowRight, Sparkles } from "lucide-react";
 import heroImg from "@/assets/hero-primefit.jpg";
 import mockupImg from "@/assets/mockup-solution.jpg";
 import compareImg from "@/assets/before-after.jpg";
@@ -53,13 +53,14 @@ const Index = () => {
             <span className="text-base font-semibold">True Rise Company</span>
           </div>
           <div className="hidden md:flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#problema" className="hover:text-foreground transition-colors">Problema</a>
-            <a href="#solucao" className="hover:text-foreground transition-colors">Solução</a>
-            <a href="#caso" className="hover:text-foreground transition-colors">Caso Primefit</a>
-            <a href="#roadmap" className="hover:text-foreground transition-colors">Roadmap</a>
+            <a href="#problema" className="story-link">Problema</a>
+            <a href="#solucao" className="story-link">Solução</a>
+            <a href="#caso" className="story-link">Caso Primefit</a>
+            <a href="#modelo" className="story-link">Modelo</a>
+            <a href="#cta" className="story-link">Contato</a>
           </div>
           <div className="flex items-center gap-3">
-            <Button asChild variant="brand">
+            <Button asChild variant="brand" className="hover-scale">
               <a href="#cta" aria-label="Falar com True Rise">Quero aplicar na minha empresa</a>
             </Button>
           </div>
@@ -68,9 +69,9 @@ const Index = () => {
 
       <main>
         {/* HERO */}
-        <section className="relative overflow-hidden">
+        <section className="relative overflow-hidden ambient-red">
           <div className="container mx-auto py-14 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-            <div>
+            <div className="animate-enter">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
                 TRUE RISE COMPANY
               </h1>
@@ -78,7 +79,7 @@ const Index = () => {
                 Automação + Inteligência Artificial para Vendas e Marketing. Transformando a Primefit em um caso de sucesso replicável para empresas de todos os setores.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button variant="hero" className="px-6 py-6 text-base">
+                <Button variant="hero" className="px-6 py-6 text-base hover-scale">
                   Começar agora <ArrowRight className="ml-1" />
                 </Button>
                 <Button asChild variant="outline" className="px-6 py-6 text-base">
@@ -92,13 +93,14 @@ const Index = () => {
                 <li className="flex items-center gap-2"><CheckCircle2 className="text-accent" /> Console de Automação</li>
               </ul>
             </div>
-            <div className="relative">
+            <div className="relative animate-fade-in">
               <img
                 src={heroImg}
                 alt="Pessoa usando WhatsApp com chatbot de vendas, elementos de IA e dashboards"
                 className="w-full h-auto rounded-lg border border-border shadow-[var(--shadow-elev)]"
                 loading="eager"
               />
+              <Sparkles className="absolute -top-3 -right-3 text-accent" />
             </div>
           </div>
         </section>
@@ -106,7 +108,7 @@ const Index = () => {
         {/* PROBLEMA */}
         <section id="problema" className="container mx-auto py-16 md:py-24">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <article>
+            <article className="animate-enter">
               <h2 className="text-3xl md:text-4xl font-semibold">O Problema</h2>
               <p className="mt-4 text-muted-foreground">
                 Empresas perdem vendas e tempo com tarefas manuais por falta de tecnologia acessível para automatizar atendimento, marketing e análise.
@@ -118,7 +120,7 @@ const Index = () => {
                 <li className="flex gap-3"><BarChart3 className="text-accent" /> Falta de relatórios rápidos para decisões estratégicas.</li>
               </ul>
             </article>
-            <div>
+            <div className="animate-fade-in">
               <img src={compareImg} alt="Antes e depois: processos manuais vs automação por IA" className="w-full h-auto rounded-lg border border-border" loading="lazy" />
             </div>
           </div>
@@ -127,10 +129,10 @@ const Index = () => {
         {/* SOLUÇÃO */}
         <section id="solucao" className="border-y border-border bg-secondary/30">
           <div className="container mx-auto py-16 md:py-24 grid lg:grid-cols-2 gap-10 items-center">
-            <div>
+            <div className="animate-fade-in">
               <img src={mockupImg} alt="Mockup do WhatsApp com chatbot e dashboard em tempo real" className="w-full h-auto rounded-lg border border-border" loading="lazy" />
             </div>
-            <article>
+            <article className="animate-enter">
               <h2 className="text-3xl md:text-4xl font-semibold">Nossa Solução</h2>
               <p className="mt-4 text-muted-foreground">
                 Plataforma inteligente que combina chatbot de vendas, automação de marketing e relatórios em tempo real, operada por IA e invisível para o usuário final.
@@ -147,7 +149,7 @@ const Index = () => {
 
         {/* CASO PRIMEFIT */}
         <section id="caso" className="container mx-auto py-16 md:py-24">
-          <header className="flex items-center gap-4">
+          <header className="flex items-center gap-4 animate-enter">
             <img src="/lovable-uploads/832bebe1-2540-4c41-8455-047c311b0a44.png" alt="Logo Primefit" className="h-8 w-auto" />
             <h2 className="text-3xl md:text-4xl font-semibold">O Caso Primefit</h2>
           </header>
@@ -164,7 +166,7 @@ const Index = () => {
               "Console de Automação (interno True Rise)",
               "Sandbox de Postagem",
             ].map((item) => (
-              <div key={item} className="rounded-lg border border-border bg-card p-4 flex items-start gap-2">
+              <div key={item} className="rounded-lg border border-border bg-card p-4 flex items-start gap-2 hover-scale animate-enter">
                 <CheckCircle2 className="mt-0.5 text-accent" />
                 <span>{item}</span>
               </div>
@@ -172,120 +174,68 @@ const Index = () => {
           </div>
         </section>
 
-        {/* COMO FUNCIONA */}
-        <section id="como-funciona" className="border-y border-border">
+        {/* MODELO DE RECEITA (Melhorado) */}
+        <section id="modelo" className="border-y border-border ambient-red">
           <div className="container mx-auto py-16 md:py-24">
-            <h2 className="text-3xl md:text-4xl font-semibold">Como Funciona</h2>
-            <div className="mt-8 grid md:grid-cols-4 gap-6">
-              {[
-                { icon: MessageSquare, title: "Responde em segundos", desc: "Recebe mensagens no WhatsApp e o chatbot atende instantaneamente." },
-                { icon: Layers, title: "Cria em 1 clique", desc: "Campanhas e posts gerados e agendados em minutos." },
-                { icon: Globe2, title: "Publica e acompanha", desc: "Integração com redes sociais e métricas de engajamento." },
-                { icon: BarChart3, title: "Relatórios diários", desc: "Ações recomendadas no WhatsApp para vender mais." },
-              ].map((s, i) => (
-                <article key={i} className="rounded-xl border border-border bg-card p-6 h-full shadow-[var(--shadow-elev)]">
-                  <s.icon className="text-accent" />
-                  <h3 className="mt-3 font-semibold">{s.title}</h3>
-                  <p className="mt-2 text-sm text-muted-foreground">{s.desc}</p>
+            <h2 className="text-3xl md:text-4xl font-semibold">Modelo de Receita</h2>
+            <p className="mt-3 text-muted-foreground max-w-2xl">
+              Combinação de setup inicial para implementação rápida e planos mensais que escalam conforme sua necessidade.
+            </p>
+            <div className="mt-10 grid md:grid-cols-3 gap-6">
+              {[{
+                name: 'Básico', price: 'R$ 490/mês', setup: 'Setup R$ 1.490', popular: false, points: ['Chatbot de Vendas', 'Relatórios diários no WhatsApp', 'Suporte padrão']
+              }, {
+                name: 'Pro', price: 'R$ 990/mês', setup: 'Setup R$ 2.490', popular: true, points: ['Tudo do Básico', 'Social Studio 1‑Clique', 'Campanhas relâmpago', 'Reativações automáticas']
+              }, {
+                name: 'Premium', price: 'Sob consulta', setup: 'Setup sob consulta', popular: false, points: ['Tudo do Pro', 'Integrações avançadas', 'Consultoria de performance', 'SLA prioritário']
+              }].map((plan) => (
+                <article key={plan.name} className={`relative rounded-2xl border ${plan.popular ? 'border-accent' : 'border-border'} bg-card p-6 shadow-[var(--shadow-elev)] animate-enter hover-scale`}>
+                  {plan.popular && (
+                    <span className="absolute -top-3 left-6 rounded-full px-3 py-1 text-xs bg-accent text-accent-foreground">Mais popular</span>
+                  )}
+                  <h3 className="text-xl font-semibold">{plan.name}</h3>
+                  <p className="mt-1 text-2xl font-bold">{plan.price}</p>
+                  <p className="text-sm text-muted-foreground">{plan.setup}</p>
+                  <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                    {plan.points.map((p) => (
+                      <li key={p} className="flex gap-2"><CheckCircle2 className="text-accent" /> {p}</li>
+                    ))}
+                  </ul>
+                  <Button variant={plan.popular ? 'hero' : 'brand'} className="mt-6 w-full">Quero este plano</Button>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        {/* DIFERENCIAIS */}
-        <section id="diferenciais" className="container mx-auto py-16 md:py-24">
-          <h2 className="text-3xl md:text-4xl font-semibold">Diferenciais True Rise</h2>
-          <div className="mt-8 grid md:grid-cols-2 gap-6 text-base text-muted-foreground">
-            <div className="rounded-lg border border-border p-6 bg-secondary/20"><strong className="text-foreground">Tecnologia invisível</strong> – tudo acontece nos bastidores, sem exigir conhecimento técnico.</div>
-            <div className="rounded-lg border border-border p-6 bg-secondary/20"><strong className="text-foreground">Velocidade</strong> – de ideia à publicação em minutos.</div>
-            <div className="rounded-lg border border-border p-6 bg-secondary/20"><strong className="text-foreground">Escalabilidade</strong> – pronto para qualquer tipo de negócio.</div>
-            <div className="rounded-lg border border-border p-6 bg-secondary/20"><strong className="text-foreground">Economia</strong> – reduz custos e aumenta margem.</div>
-            <div className="rounded-lg border border-border p-6 bg-secondary/20"><strong className="text-foreground">Foco no resultado</strong> – ferramentas criadas para gerar faturamento real.</div>
-          </div>
-        </section>
-
-        {/* MERCADO */}
-        <section id="mercado" className="border-y border-border bg-secondary/30">
-          <div className="container mx-auto py-16 md:py-24">
-            <h2 className="text-3xl md:text-4xl font-semibold">Potencial de Mercado</h2>
-            <div className="mt-8 grid md:grid-cols-3 gap-6">
-              <div className="rounded-xl border border-border bg-card p-6"><p className="text-4xl font-bold">US$ 30 bi</p><p className="text-sm text-muted-foreground mt-2">Automação empresarial até 2030.</p></div>
-              <div className="rounded-xl border border-border bg-card p-6"><p className="text-4xl font-bold">+25% a.a.</p><p className="text-sm text-muted-foreground mt-2">Crescimento de IA em marketing e vendas.</p></div>
-              <div className="rounded-xl border border-border bg-card p-6"><p className="text-4xl font-bold">90%+</p><p className="text-sm text-muted-foreground mt-2">PMEs no Brasil: enorme espaço para crescer.</p></div>
-            </div>
-          </div>
-        </section>
-
-        {/* MODELO DE RECEITA */}
-        <section id="modelo" className="container mx-auto py-16 md:py-24">
-          <h2 className="text-3xl md:text-4xl font-semibold">Modelo de Receita</h2>
-          <div className="mt-8 grid md:grid-cols-3 gap-6">
-            {[
-              { name: "Básico", points: ["Setup inicial", "Chatbot + relatórios", "Suporte padrão"] },
-              { name: "Pro", points: ["Tudo do Básico", "Social Studio 1‑Clique", "Campanhas relâmpago"] },
-              { name: "Premium", points: ["Tudo do Pro", "Integrações avançadas", "Consultoria de performance"] },
-            ].map((plan) => (
-              <article key={plan.name} className="rounded-xl border border-border bg-card p-6">
-                <h3 className="text-xl font-semibold">{plan.name}</h3>
-                <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                  {plan.points.map((p) => (
-                    <li key={p} className="flex gap-2"><CheckCircle2 className="text-accent" /> {p}</li>
-                  ))}
-                </ul>
-                <Button variant="brand" className="mt-6 w-full">Quero este plano</Button>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        {/* PROJEÇÕES */}
-        <section id="projecoes" className="border-y border-border bg-secondary/30">
+        {/* PROJEÇÕES (corrigido pt-br) */}
+        <section id="projecoes" className="border-b border-border bg-secondary/30">
           <div className="container mx-auto py-16 md:py-24">
             <h2 className="text-3xl md:text-4xl font-semibold">Projeções com a Primefit</h2>
             <div className="mt-8 grid md:grid-cols-4 gap-6">
-              <div className="rounded-xl border border-border bg-card p-6"><p className="text-4xl font-bold">+30%</p><p className="text-sm text-muted-foreground mt-2">em vendas online (3 meses)</p></div>
-              <div className="rounded-xl border border-border bg-card p-6"><p className="text-4xl font-bold">+40%</p><p className="text-sm text-muted-foreground mt-2">de engajamento nas redes</p></div>
-              <div className="rounded-xl border border-border bg-card p-6"><p className="text-4xl font-bold">-50%</p><p className="text-sm text-muted-foreground mt-2">de tempo operacional</p></div>
-              <div className="rounded-xl border border-border bg-card p-6"><p className="text-4xl font-bold">Ready</p><p className="text-sm text-muted-foreground mt-2">para replicar em novos clientes</p></div>
+              <div className="rounded-xl border border-border bg-card p-6 animate-enter"><p className="text-4xl font-bold">+30%</p><p className="text-sm text-muted-foreground mt-2">em vendas online (3 meses)</p></div>
+              <div className="rounded-xl border border-border bg-card p-6 animate-enter"><p className="text-4xl font-bold">+40%</p><p className="text-sm text-muted-foreground mt-2">de engajamento nas redes</p></div>
+              <div className="rounded-xl border border-border bg-card p-6 animate-enter"><p className="text-4xl font-bold">-50%</p><p className="text-sm text-muted-foreground mt-2">de tempo operacional</p></div>
+              <div className="rounded-xl border border-border bg-card p-6 animate-enter"><p className="text-4xl font-bold">Pronto</p><p className="text-sm text-muted-foreground mt-2">para replicar em novos clientes</p></div>
             </div>
           </div>
         </section>
 
-        {/* ROADMAP */}
-        <section id="roadmap" className="container mx-auto py-16 md:py-24">
-          <h2 className="text-3xl md:text-4xl font-semibold">Roadmap</h2>
-          <ol className="mt-8 grid md:grid-cols-5 gap-4 text-sm text-muted-foreground">
-            {[
-              "Implementação Primefit (4 semanas)",
-              "Coleta e análise de resultados",
-              "Material de marketing do case",
-              "Lançamento comercial",
-              "Expansão nacional e internacional",
-            ].map((step, idx) => (
-              <li key={idx} className="rounded-lg border border-border p-4 bg-secondary/20">
-                <span className="text-foreground font-medium">{idx + 1}. </span>
-                {step}
-              </li>
-            ))}
-          </ol>
-        </section>
-
         {/* CTA FINAL */}
-        <section id="cta" className="border-t border-border">
+        <section id="cta">
           <div className="container mx-auto py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
-            <div>
+            <div className="animate-enter">
               <h2 className="text-3xl md:text-4xl font-semibold">Junte-se à True Rise Company</h2>
               <p className="mt-4 text-muted-foreground">
                 Faça parte da transformação digital que vai mudar a forma como empresas vendem e se comunicam.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button asChild variant="hero" className="px-6 py-6 text-base">
+                <Button asChild variant="hero" className="px-6 py-6 text-base hover-scale">
                   <a href="mailto:contato@truerise.co" aria-label="Enviar e-mail para True Rise">
                     Falar com um especialista
                   </a>
                 </Button>
-                <Button asChild variant="brand" className="px-6 py-6 text-base">
+                <Button asChild variant="brand" className="px-6 py-6 text-base hover-scale">
                   <a href="tel:+550000000000" aria-label="Ligar para True Rise">
                     Ligar agora
                   </a>
@@ -296,12 +246,12 @@ const Index = () => {
                 <span className="inline-flex items-center gap-1"><Phone className="size-4" /> +55 (00) 0000‑0000</span>
               </div>
             </div>
-            <div className="rounded-xl border border-border bg-card p-6 shadow-[var(--shadow-elev)]">
+            <div className="rounded-xl border border-border bg-card p-6 shadow-[var(--shadow-elev)] animate-enter">
               <h3 className="font-semibold">Por que investir agora</h3>
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                <li className="flex gap-2"><Rocket className="text-accent" /> Momento único de mercado para automação e IA.</li>
-                <li className="flex gap-2"><CheckCircle2 className="text-accent" /> Primefit será prova viva do impacto.</li>
-                <li className="flex gap-2"><Globe2 className="text-accent" /> Produto com potencial de recorrência e escala.</li>
+                <li className="flex gap-2"><Globe2 className="text-accent" /> Mercado aquecido em automação e IA.</li>
+                <li className="flex gap-2"><CheckCircle2 className="text-accent" /> Primefit como prova real do impacto.</li>
+                <li className="flex gap-2"><BarChart3 className="text-accent" /> Produto com potencial de recorrência e escala.</li>
               </ul>
             </div>
           </div>
