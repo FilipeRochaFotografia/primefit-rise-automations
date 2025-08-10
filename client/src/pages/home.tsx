@@ -384,9 +384,9 @@ export default function Home() {
           <div className="relative mb-16">
             {/* Carousel Container */}
             <div className="overflow-x-auto scrollbar-hide">
-              <div className="flex gap-8 pb-4" style={{ minWidth: 'max-content' }}>
+              <div className="flex gap-4 lg:gap-8 pb-4" style={{ minWidth: 'max-content' }}>
                 {/* Before */}
-                <div className="bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-8 min-w-[400px]">
+                <div className="bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 lg:p-8 min-w-[300px] lg:min-w-[400px]">
                   <h3 className="text-2xl font-bold mb-6 text-red-400 text-center">
                     <i className="fas fa-times-circle mr-2"></i>
                     Antes da Automação
@@ -408,7 +408,7 @@ export default function Home() {
                 </div>
                 
                 {/* After */}
-                <div className="bg-gray-900/80 backdrop-blur-md border border-green-500/50 rounded-2xl p-8 min-w-[400px]">
+                <div className="bg-gray-900/80 backdrop-blur-md border border-green-500/50 rounded-2xl p-6 lg:p-8 min-w-[300px] lg:min-w-[400px]">
                   <h3 className="text-2xl font-bold mb-6 text-green-400 text-center">
                     <i className="fas fa-check-circle mr-2"></i>
                     Depois da Automação
@@ -429,33 +429,13 @@ export default function Home() {
                   </div>
                 </div>
                 
-                {/* Comparison Summary */}
-                <div className="bg-gray-900/80 backdrop-blur-md border border-blue-500/50 rounded-2xl p-8 min-w-[400px]">
-                  <h3 className="text-2xl font-bold mb-6 text-blue-400 text-center">
-                    <i className="fas fa-chart-line mr-2"></i>
-                    Resumo da Transformação
-                  </h3>
-                  <div className="space-y-4">
-                    {[
-                      { label: "Melhoria no Tempo", value: "99.3%", color: "blue" },
-                      { label: "Aumento Conversão", value: "+213%", color: "blue" },
-                      { label: "Crescimento Posts", value: "+567%", color: "blue" },
-                      { label: "Redução Custos", value: "-65%", color: "blue" },
-                      { label: "Aumento Vendas", value: "+76%", color: "blue" }
-                    ].map((metric, index) => (
-                      <div key={index} className="flex justify-between items-center py-3 border-b border-gray-700">
-                        <span className="text-gray-300">{metric.label}</span>
-                        <span className={`text-${metric.color}-400 font-bold`}>{metric.value}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+
               </div>
             </div>
             
             {/* Navigation Dots */}
             <div className="flex justify-center mt-8 space-x-2">
-              {[...Array(3)].map((_, index) => (
+              {[...Array(2)].map((_, index) => (
                 <motion.button
                   key={index}
                   className="w-3 h-3 rounded-full bg-gray-600 hover:bg-blue-500 transition-colors duration-300"
