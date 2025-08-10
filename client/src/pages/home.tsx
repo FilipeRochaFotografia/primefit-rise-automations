@@ -10,39 +10,8 @@ import { ProblemCardsGrid } from "@/components/interactive/ProblemCard3D";
 
 
 export default function Home() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="bg-black text-white overflow-x-hidden font-inter">
-      {/* Header */}
-      <motion.header 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="fixed top-0 w-full z-50 glass-effect border-b border-red-500/20"
-      >
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold">
-              <span className="text-white">TRUE</span><span className="text-red-500">RISE</span>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('case')} className="hover:text-red-400 transition-colors">Case</button>
-              <button onClick={() => scrollToSection('resultados')} className="hover:text-red-400 transition-colors">Resultados</button>
-            </nav>
-            <Button 
-              onClick={() => scrollToSection('precos')}
-              className="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-red-500/25"
-            >
-              Contato
-            </Button>
-          </div>
-        </div>
-      </motion.header>
 
       {/* Hero Section 3D */}
       <HeroSection3D />
@@ -129,6 +98,16 @@ export default function Home() {
             ))}
           </div>
           
+          {/* Dashboard Personalizado */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-black mb-6">
+              Dashboard <span className="text-red-500">Personalizado</span>
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Controle total sobre suas métricas e performance em tempo real
+            </p>
+          </div>
+          
           <DashboardMockup />
         </div>
       </motion.section>
@@ -163,21 +142,18 @@ export default function Home() {
                   { icon: "fas fa-briefcase", title: "Consultoria", desc: "Empresarial, financeira, estratégica" },
                   { icon: "fas fa-utensils", title: "Restaurantes", desc: "Delivery, cardápio, pedidos" },
                   { icon: "fas fa-dumbbell", title: "Academias", desc: "Treinos, suplementos, personal" }
-            ].map((sector, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                            ].map((sector, index) => (
+                  <div
+                    key={index}
                     className="min-w-[280px] bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 text-center hover:bg-red-500/10 hover:border-red-500/30 transition-all duration-300 group"
-              >
+                  >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <i className={`${sector.icon} text-white text-2xl`}></i>
                 </div>
                 <h3 className="text-lg font-bold text-red-400 mb-2">{sector.title}</h3>
                 <p className="text-sm text-gray-400">{sector.desc}</p>
                 <div className="mt-3 text-xs text-green-400 font-medium">✓ IA Personalizada</div>
-              </motion.div>
+              </div>
             ))}
               </div>
             </div>
@@ -256,19 +232,19 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         id="precos"
-        className="py-20 relative"
+        className="py-20 relative bg-black"
       >
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black mb-6">
-              Modelo de <span className="text-red-500 glow-text">Receita</span>
+              Modelo de <span className="text-red-500">Receita</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Investimento que se paga em menos de 30 dias com o aumento de vendas
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-8 max-w-6xl mx-auto">
             {[
                               {
                   icon: "fas fa-rocket",
@@ -294,7 +270,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-10 text-center relative ${plan.popular ? 'border-2 border-red-500 shadow-2xl shadow-red-500/20' : ''} hover:bg-${plan.color}-500/20 hover:border-${plan.color}-500/30 transition-all duration-300`}
+                className={`bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-8 lg:p-10 text-center relative w-full lg:flex-1 lg:max-w-md ${plan.popular ? 'border-2 border-red-500 shadow-2xl shadow-red-500/20' : ''} hover:bg-${plan.color}-500/20 hover:border-${plan.color}-500/30 transition-all duration-300`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-4 py-1 rounded-full text-sm font-bold">
@@ -392,96 +368,178 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
         id="resultados" 
-        className="py-20 relative bg-gradient-to-r from-gray-900 to-black"
+        className="py-20 relative bg-black"
       >
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black mb-6">
-              Resultados <span className="text-red-500 glow-text">Esperados</span>
+              Resultados <span className="text-red-500">Esperados</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Transformação comprovada baseada em dados reais do case PrimeFit
             </p>
           </div>
           
-          {/* Before/After Comparison */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            {/* Before */}
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-8"
-            >
-              <h3 className="text-2xl font-bold mb-6 text-red-400 text-center">
-                <i className="fas fa-times-circle mr-2"></i>
-                Antes da Automação
-              </h3>
-              <div className="space-y-4">
-                {[
-                  { label: "Tempo de Resposta", value: "4-8 horas", color: "red" },
-                  { label: "Taxa de Conversão", value: "15%", color: "red" },
-                  { label: "Posts por Semana", value: "2-3", color: "red" },
-                  { label: "Custo Operacional", value: "R$ 8.000/mês", color: "red" },
-                  { label: "Vendas Online", value: "R$ 89k/mês", color: "red" }
-                ].map((metric, index) => (
-                  <div key={index} className="flex justify-between items-center py-3 border-b border-gray-700">
-                    <span className="text-gray-300">{metric.label}</span>
-                    <span className={`text-${metric.color}-400 font-bold`}>{metric.value}</span>
+          {/* Before/After Comparison Carousel */}
+          <div className="relative mb-16">
+            {/* Carousel Container */}
+            <div className="overflow-x-auto scrollbar-hide">
+              <div className="flex gap-8 pb-4" style={{ minWidth: 'max-content' }}>
+                {/* Before */}
+                <div className="bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-8 min-w-[400px]">
+                  <h3 className="text-2xl font-bold mb-6 text-red-400 text-center">
+                    <i className="fas fa-times-circle mr-2"></i>
+                    Antes da Automação
+                  </h3>
+                  <div className="space-y-4">
+                    {[
+                      { label: "Tempo de Resposta", value: "4-8 horas", color: "red" },
+                      { label: "Taxa de Conversão", value: "15%", color: "red" },
+                      { label: "Posts por Semana", value: "2-3", color: "red" },
+                      { label: "Custo Operacional", value: "R$ 8.000/mês", color: "red" },
+                      { label: "Vendas Online", value: "R$ 89k/mês", color: "red" }
+                    ].map((metric, index) => (
+                      <div key={index} className="flex justify-between items-center py-3 border-b border-gray-700">
+                        <span className="text-gray-300">{metric.label}</span>
+                        <span className={`text-${metric.color}-400 font-bold`}>{metric.value}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+                
+                {/* After */}
+                <div className="bg-gray-900/80 backdrop-blur-md border border-green-500/50 rounded-2xl p-8 min-w-[400px]">
+                  <h3 className="text-2xl font-bold mb-6 text-green-400 text-center">
+                    <i className="fas fa-check-circle mr-2"></i>
+                    Depois da Automação
+                  </h3>
+                  <div className="space-y-4">
+                    {[
+                      { label: "Tempo de Resposta", value: "20 segundos", color: "green" },
+                      { label: "Taxa de Conversão", value: "47%", color: "green" },
+                      { label: "Posts por Semana", value: "15-20", color: "green" },
+                      { label: "Custo Operacional", value: "R$ 2.800/mês", color: "green" },
+                      { label: "Vendas Online", value: "R$ 157k/mês", color: "green" }
+                    ].map((metric, index) => (
+                      <div key={index} className="flex justify-between items-center py-3 border-b border-gray-700">
+                        <span className="text-gray-300">{metric.label}</span>
+                        <span className={`text-${metric.color}-400 font-bold`}>{metric.value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                
+                {/* Comparison Summary */}
+                <div className="bg-gray-900/80 backdrop-blur-md border border-blue-500/50 rounded-2xl p-8 min-w-[400px]">
+                  <h3 className="text-2xl font-bold mb-6 text-blue-400 text-center">
+                    <i className="fas fa-chart-line mr-2"></i>
+                    Resumo da Transformação
+                  </h3>
+                  <div className="space-y-4">
+                    {[
+                      { label: "Melhoria no Tempo", value: "99.3%", color: "blue" },
+                      { label: "Aumento Conversão", value: "+213%", color: "blue" },
+                      { label: "Crescimento Posts", value: "+567%", color: "blue" },
+                      { label: "Redução Custos", value: "-65%", color: "blue" },
+                      { label: "Aumento Vendas", value: "+76%", color: "blue" }
+                    ].map((metric, index) => (
+                      <div key={index} className="flex justify-between items-center py-3 border-b border-gray-700">
+                        <span className="text-gray-300">{metric.label}</span>
+                        <span className={`text-${metric.color}-400 font-bold`}>{metric.value}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </motion.div>
+            </div>
             
-            {/* After */}
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-gray-900/80 backdrop-blur-md border border-green-500/50 rounded-2xl p-8"
-            >
-              <h3 className="text-2xl font-bold mb-6 text-green-400 text-center">
-                <i className="fas fa-check-circle mr-2"></i>
-                Depois da Automação
-              </h3>
-              <div className="space-y-4">
-                {[
-                  { label: "Tempo de Resposta", value: "20 segundos", color: "green" },
-                  { label: "Taxa de Conversão", value: "47%", color: "green" },
-                  { label: "Posts por Semana", value: "15-20", color: "green" },
-                  { label: "Custo Operacional", value: "R$ 2.800/mês", color: "green" },
-                  { label: "Vendas Online", value: "R$ 157k/mês", color: "green" }
-                ].map((metric, index) => (
-                  <div key={index} className="flex justify-between items-center py-3 border-b border-gray-700">
-                    <span className="text-gray-300">{metric.label}</span>
-                    <span className={`text-${metric.color}-400 font-bold`}>{metric.value}</span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+            {/* Navigation Dots */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {[...Array(3)].map((_, index) => (
+                <motion.button
+                  key={index}
+                  className="w-3 h-3 rounded-full bg-gray-600 hover:bg-blue-500 transition-colors duration-300"
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                />
+              ))}
+            </div>
+            
+            {/* Scroll Indicator */}
+            <div className="text-center mt-4">
+              <motion.div
+                className="inline-flex items-center text-gray-400 text-sm"
+                animate={{
+                  x: [0, 10, 0]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <span>Deslize para ver a comparação completa</span>
+                <i className="fas fa-arrow-right ml-2"></i>
+              </motion.div>
+            </div>
           </div>
           
-          {/* Key Metrics */}
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { value: 76, suffix: "%", prefix: "+", title: "Aumento em Vendas", description: "De R$ 89k para R$ 157k mensais", color: "green" },
-              { value: 65, suffix: "%", prefix: "-", title: "Redução de Custos", description: "Economia de R$ 5.200 mensais", color: "green" },
-              { value: 98, suffix: "%", prefix: "", title: "Mais Rápido", description: "Resposta instantânea vs 4-8h", color: "green" }
-            ].map((metric, index) => (
+          {/* Key Metrics Carousel */}
+          <div className="relative">
+            {/* Carousel Container */}
+            <div className="overflow-x-auto scrollbar-hide">
+              <div className="flex gap-8 pb-4" style={{ minWidth: 'max-content' }}>
+                {[
+                  { value: 76, suffix: "%", prefix: "+", title: "Aumento em Vendas", description: "De R$ 89k para R$ 157k mensais", color: "green" },
+                  { value: 65, suffix: "%", prefix: "-", title: "Redução de Custos", description: "Economia de R$ 5.200 mensais", color: "green" },
+                  { value: 98, suffix: "%", prefix: "", title: "Mais Rápido", description: "Resposta instantânea vs 4-8h", color: "green" },
+                  { value: 213, suffix: "%", prefix: "+", title: "Taxa de Conversão", description: "De 15% para 47%", color: "green" },
+                  { value: 567, suffix: "%", prefix: "+", title: "Posts por Semana", description: "De 2-3 para 15-20", color: "green" },
+                  { value: 24, suffix: "h", prefix: "", title: "Disponibilidade", description: "Atendimento 24/7", color: "green" }
+                ].map((metric, index) => (
+                  <div
+                    key={index}
+                    className={`glass-effect rounded-2xl p-8 text-center group hover:bg-${metric.color}-500/10 transition-all duration-300 min-w-[320px]`}
+                  >
+                    <div className={`text-5xl font-black text-${metric.color}-400 mb-4 group-hover:scale-110 transition-transform`}>
+                      <AnimatedCounter end={metric.value} prefix={metric.prefix} suffix={metric.suffix} />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2">{metric.title}</h3>
+                    <p className="text-gray-400">{metric.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Navigation Dots */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {[...Array(6)].map((_, index) => (
+                <motion.button
+                  key={index}
+                  className="w-3 h-3 rounded-full bg-gray-600 hover:bg-green-500 transition-colors duration-300"
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                />
+              ))}
+            </div>
+            
+            {/* Scroll Indicator */}
+            <div className="text-center mt-4">
               <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`glass-effect rounded-2xl p-8 text-center group hover:bg-${metric.color}-500/10 transition-all duration-300`}
+                className="inline-flex items-center text-gray-400 text-sm"
+                animate={{
+                  x: [0, 10, 0]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
               >
-                <div className={`text-5xl font-black text-${metric.color}-400 mb-4 group-hover:scale-110 transition-transform`}>
-                  <AnimatedCounter end={metric.value} prefix={metric.prefix} suffix={metric.suffix} />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{metric.title}</h3>
-                <p className="text-gray-400">{metric.description}</p>
+                <span>Deslize para ver mais resultados</span>
+                <i className="fas fa-arrow-right ml-2"></i>
               </motion.div>
-            ))}
+            </div>
           </div>
         </div>
       </motion.section>
