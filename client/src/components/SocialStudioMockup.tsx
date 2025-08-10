@@ -111,23 +111,122 @@ export default function SocialStudioMockup() {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-gray-800 rounded-lg p-3"
+              className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4"
             >
-              <div className="text-xs text-blue-400 mb-2">Preview Facebook</div>
-              <div className="text-xs text-gray-400">{generatePreview("facebook")}</div>
+              <div className="flex items-center mb-3">
+                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                  <i className="fab fa-facebook text-white text-sm"></i>
+                </div>
+                <div>
+                  <div className="text-sm font-bold text-white">PrimeFit Suplementos</div>
+                  <div className="text-xs text-gray-400">2 min • 🌍</div>
+                </div>
+              </div>
+              <div className="text-sm text-gray-300 leading-relaxed mb-3">
+                💪 Transforme seu treino com o Whey Protein Gold Standard! 
+                
+                ✅ 24g de proteína por dose
+                ✅ Absorção rápida 
+                ✅ Sabores incríveis
+                
+                🔥 OFERTA ESPECIAL: 25% OFF + Frete Grátis
+                
+                👆 Link na bio para garantir o seu!
+                
+                #WheyProtein #Suplementos #Treino #Fitness
+              </div>
+              <div className="flex items-center text-xs text-gray-500 space-x-4">
+                <span>👍 127</span>
+                <span>💬 23</span>
+                <span>↗️ 8</span>
+              </div>
             </motion.div>
           )}
           {selectedNetworks.includes("instagram") && (
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-gray-800 rounded-lg p-3"
+              className="bg-pink-900/20 border border-pink-500/30 rounded-lg p-4"
             >
-              <div className="text-xs text-pink-400 mb-2">Preview Instagram</div>
-              <div className="text-xs text-gray-400">{generatePreview("instagram")}</div>
+              <div className="flex items-center mb-3">
+                <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mr-3">
+                  <i className="fab fa-instagram text-white text-sm"></i>
+                </div>
+                <div>
+                  <div className="text-sm font-bold text-white">primefit_oficial</div>
+                  <div className="text-xs text-gray-400">São Paulo, Brasil</div>
+                </div>
+              </div>
+              <div className="bg-gradient-to-br from-yellow-500 to-orange-600 rounded-lg h-24 mb-3 flex items-center justify-center">
+                <div className="text-white font-bold text-center">
+                  <div className="text-lg">WHEY PROTEIN</div>
+                  <div className="text-sm">GOLD STANDARD</div>
+                </div>
+              </div>
+              <div className="text-sm text-gray-300 leading-relaxed mb-2">
+                <strong>primefit_oficial</strong> 🔥 Conquiste seus objetivos com qualidade premium! 
+                Whey Gold Standard com 24g de proteína por dose 💪
+                
+                ✨ Use o código: PRIME25 
+                🚚 Frete grátis para todo Brasil
+                
+                #wheyprotein #suplementos #fitness #gains
+              </div>
+              <div className="flex items-center text-xs text-gray-500 space-x-4">
+                <span>❤️ 89</span>
+                <span>💬 12</span>
+                <span>↗️ 5</span>
+              </div>
             </motion.div>
           )}
         </div>
+        
+        {/* Ready Post Example */}
+        {theme && selectedNetworks.length > 0 && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="mt-6 bg-green-900/20 border border-green-500/30 rounded-xl p-6"
+          >
+            <div className="flex items-center mb-4">
+              <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center mr-3">
+                <i className="fas fa-check text-white"></i>
+              </div>
+              <div>
+                <div className="text-lg font-bold text-green-400">Publicação Gerada!</div>
+                <div className="text-sm text-gray-400">Pronta para {selectedNetworks.length} rede{selectedNetworks.length > 1 ? 's' : ''} social{selectedNetworks.length > 1 ? 'is' : ''}</div>
+              </div>
+            </div>
+            <div className="bg-gray-800/50 rounded-lg p-4 border border-gray-700">
+              <div className="text-sm text-gray-300 mb-3">
+                🎯 <strong>Conteúdo personalizado para:</strong> {theme}
+              </div>
+              <div className="text-sm text-gray-300 mb-3">
+                📱 <strong>Redes selecionadas:</strong> {selectedNetworks.map(n => n.charAt(0).toUpperCase() + n.slice(1)).join(", ")}
+              </div>
+              <div className="text-sm text-gray-300 mb-4">
+                🎨 <strong>Tom:</strong> {tone.charAt(0).toUpperCase() + tone.slice(1)}
+              </div>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center text-sm text-green-400">
+                  <i className="fas fa-clock mr-2"></i>
+                  Gerado em 3.2 segundos
+                </div>
+                <div className="flex space-x-2">
+                  <Button size="sm" variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-700">
+                    <i className="fas fa-edit mr-1"></i>
+                    Editar
+                  </Button>
+                  <Button size="sm" className="bg-green-600 hover:bg-green-700">
+                    <i className="fas fa-share mr-1"></i>
+                    Publicar
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
         
         <Button 
           className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/25"
