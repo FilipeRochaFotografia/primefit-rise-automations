@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRUE RISE COMPANY - IA para Automação Empresarial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-red': '#DC2626',
+                        'brand-dark': '#0F0F0F',
+                        'brand-gray': '#1F2937',
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        .animate-slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #FFFFFF, #F3F4F6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.2);
+        }
+        
+        .counter {
+            animation: countUp 2s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-black text-white font-inter overflow-x-hidden">
+    
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center px-4 py-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-brand-red/5 to-transparent"></div>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl lg:text-7xl font-black mb-6 gradient-text leading-tight">
+                    TRUE RISE<br>
+                    <span class="text-brand-red">COMPANY</span>
+                </h1>
+                <p class="text-xl lg:text-2xl font-semibold mb-4 text-gray-200">
+                    Eliminando o trabalho manual com IA
+                </p>
+                <p class="text-lg text-gray-300 mb-8 leading-relaxed max-w-2xl">
+                    Transformando a Primefit Suplementos em um case de sucesso replicável e escalável para empresas de todos os setores.
+                </p>
+                <button class="bg-brand-red hover:bg-red-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 hover-lift shadow-2xl">
+                    Quero Conhecer a Solução
+                </button>
+            </div>
+            
+            <div class="animate-slide-up">
+                <!-- WhatsApp Mockup Integration -->
+                <div class="bg-brand-gray rounded-3xl p-6 shadow-2xl border border-gray-700">
+                    <div class="bg-black rounded-2xl p-4 mb-4">
+                        <div class="flex items-center mb-4 text-sm text-gray-400">
+                            <span>6:21</span>
+                            <div class="ml-auto flex items-center space-x-1">
+                                <div class="w-1 h-1 bg-white rounded-full"></div>
+                                <div class="w-1 h-1 bg-white rounded-full"></div>
+                                <div class="w-1 h-1 bg-white rounded-full"></div>
+                                <span class="ml-2">94%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center mb-6">
+                            <div class="w-8 h-8 bg-brand-red rounded-full flex items-center justify-center mr-3">
+                                <span class="text-xs font-bold">P</span>
+                            </div>
+                            <span class="font-medium">PrimeFIT | Luiz</span>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="flex justify-end">
+                                <div class="bg-green-600 rounded-xl px-4 py-2 max-w-xs">
+                                    <p class="text-sm">Oi, tem whey?</p>
+                                    <span class="text-xs opacity-75">6:20 PM ✓✓</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-start">
+                                <div class="bg-gray-700 rounded-xl px-4 py-2 max-w-sm">
+                                    <p class="text-sm">Oi! Temos uma ótima variedade de whey protein que você vai adorar! 🎉</p>
+                                    <span class="text-xs opacity-75 mt-2 block">6:21 PM</span>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-start">
+                                <div class="bg-gray-700 rounded-xl px-4 py-2 max-w-sm">
+                                    <p class="text-sm mb-2">Aqui vão algumas opções:</p>
+                                    <ul class="text-xs space-y-1">
+                                        <li>• <strong>100% Pure Whey Refil (900g)</strong>: R$139,99</li>
+                                        <li>• <strong>WHEY GOLD STANDARD - 900g</strong>: R$350,00</li>
+                                    </ul>
+                                    <p class="text-sm mt-2">Gostou de alguma dessas? Posso ajudar com mais opções! 💪 😊</p>
+                                    <span class="text-xs opacity-75 mt-2 block">6:21 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-sm text-gray-400">Atendimento Automatizado 24/7</p>
+                        <p class="text-xs text-brand-red font-semibold">Powered by TRUE RISE IA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Problema -->
+    <section class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6 gradient-text">O Problema</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Empresas perdem vendas e desperdiçam tempo por falta de automação inteligente
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-brand-gray rounded-2xl p-6 hover-lift border border-gray-700">
+                    <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Respostas Lentas</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Clientes esperando horas por respostas no WhatsApp, perdendo interesse e migrando para concorrência.
+                    </p>
+                </div>
+                
+                <div class="bg-brand-gray rounded-2xl p-6 hover-lift border border-gray-700">
+                    <div class="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Campanhas Demoradas</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Criação de conteúdo manual consome dias quando deveria levar minutos para publicar.
+                    </p>
+                </div>
+                
+                <div class="bg-brand-gray rounded-2xl p-6 hover-lift border border-gray-700">
+                    <div class="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Falta de Integração</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Sistemas isolados gerando retrabalho e dificultando a visão completa do negócio.
+                    </p>
+                </div>
+                
+                <div class="bg-brand-gray rounded-2xl p-6 hover-lift border border-gray-700">
+                    <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 16a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Dados Fragmentados</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        Falta de relatórios rápidos e ações sugeridas para tomada de decisões estratégicas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nossa Solução -->
+    <section class="py-20 px-4 bg-gradient-to-b from-black to-brand-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6 gradient-text">Nossa Solução</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Automação inteligente que revoluciona sua operação
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-brand-gray to-gray-800 rounded-2xl p-8 hover-lift border border-gray-600">
+                    <div class="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Atendimento Imediato</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        WhatsApp e redes sociais com respostas instantâneas e conversas naturais que convertem mais.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-brand-gray to-gray-800 rounded-2xl p-8 hover-lift border border-gray-600">
+                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Criação em 1 Clique</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Conteúdo e publicação automática em todas as redes sociais com um só comando.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-brand-gray to-gray-800 rounded-2xl p-8 hover-lift border border-gray-600">
+                    <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
+                            <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Relatórios Diários</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Dashboard intuitivo com insights e ações sugeridas para acelerar seus resultados.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-brand-gray to-gray-800 rounded-2xl p-8 hover-lift border border-gray-600">
+                    <div class="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Zero Complexidade</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Implementação sem curva de aprendizado técnico. Sua equipe usa no primeiro dia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Primefit -->
+    <section class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6 gradient-text">Case de Sucesso</h2>
+                <!-- Primefit Logo Integration -->
+                <div class="flex justify-center mb-8">
+                    <div class="bg-brand-gray rounded-2xl p-6 border border-gray-700">
+                        <div class="text-3xl font-black text-white">
+                            PRIME<span class="text-brand-red">FIT</span>
+                            <div class="text-sm font-normal text-gray-400 tracking-wider">SUPLEMENTOS</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Como transformamos a Primefit Suplementos em uma referência de automação
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-brand-red">Implementações Realizadas:</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-green-500 rounded-full mr-4"></div>
+                            <span class="text-lg">Chatbot de vendas inteligente</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-blue-500 rounded-full mr-4"></div>
+                            <span class="text-lg">Social Studio 1-Clique</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-purple-500 rounded-full mr-4"></div>
+                            <span class="text-lg">Dashboard em tempo real</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-orange-500 rounded-full mr-4"></div>
+                            <span class="text-lg">Relatórios automáticos no WhatsApp</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-brand-gray rounded-2xl p-6 border border-gray-700">
+                    <!-- Performance Metrics Display -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-brand-red counter" data-target="87">0</div>
+                            <div class="text-sm text-gray-400">% Automação</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-green-500 counter" data-target="24">0</div>
+                            <div class="text-sm text-gray-400">Horas/Dia</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-blue-500 counter" data-target="340">0</div>
+                            <div class="text-sm text-gray-400">% ROI</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-purple-500 counter" data-target="95">0</div>
+                            <div class="text-sm text-gray-400">% Satisfação</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section class="py-20 px-4 bg-gradient-to-b from-brand-dark to-black">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6 gradient-text">Como Funciona</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    4 passos para transformar sua empresa
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div class="text-center relative">
+                    <div class="w-24 h-24 bg-gradient-to-br from-brand-red to-red-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7z" clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Suporte 24/7 com IA</h3>
+                    <p class="text-gray-300">Atendimento inteligente que nunca para de vender</p>
+                </div>
+                
+                <div class="text-center relative">
+                    <div class="w-24 h-24 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Criação de Posts</h3>
+                    <p class="text-gray-300">Sistema inteligente para redes sociais automatizadas</p>
+                </div>
+                
+                <div class="text-center relative">
+                    <div class="w-24 h-24 bg-gradient-to-br from-purple-600 to-purple-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Dashboard Atualizado</h3>
+                    <p class="text-gray-300">Informações em tempo real para decisões rápidas</p>
+                </div>
+                
+                <div class="text-center relative">
+                    <div class="w-24 h-24 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 16a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Relatórios no WhatsApp</h3>
+                    <p class="text-gray-300">Insights direto no seu celular, quando precisar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modelo de Receita -->
+    <section class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6 gradient-text">Modelo de Receita</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Investimento transparente com retorno garantido
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="bg-brand-gray rounded-2xl p-8 border border-gray-700 hover-lift">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Setup Inicial</h3>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-black text-brand-red">R$ 2.997</span>
+                        <p class="text-gray-400">Pagamento único</p>
+                    </div>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Implementação completa
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Configuração personalizada
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Treinamento da equipe
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-brand-red to-red-800 rounded-2xl p-8 border-2 border-brand-red hover-lift relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full">MAIS POPULAR</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center text-white">Assinatura Mensal</h3>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-black text-white">R$ 897</span>
+                        <p class="text-red-200">Por mês</p>
+                    </div>
+                    <ul class="space-y-3 text-white">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-white mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Suporte 24/7
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-white mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Atualizações automáticas
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-white mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Relatórios ilimitados
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-brand-gray rounded-2xl p-8 border border-gray-700 hover-lift">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Serviços Premium</h3>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-black text-yellow-400">Sob Consulta</span>
+                        <p class="text-gray-400">Personalizado</p>
+                    </div>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Desenvolvimento customizado
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Integrações específicas
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Consultoria estratégica
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resultados Esperados -->
+    <section class="py-20 px-4 bg-gradient-to-b from-black to-brand-dark">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6 gradient-text">Resultados Esperados</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Transformação real em números reais
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-green-600/20 to-green-800/20 border border-green-500/30 rounded-2xl p-8 text-center hover-lift">
+                    <div class="text-6xl font-black text-green-400 mb-4 counter" data-target="30">0</div>
+                    <div class="text-2xl font-bold text-green-300 mb-2">+30%</div>
+                    <p class="text-gray-300">Aumento em vendas online através do atendimento automatizado</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-600/20 to-blue-800/20 border border-blue-500/30 rounded-2xl p-8 text-center hover-lift">
+                    <div class="text-6xl font-black text-blue-400 mb-4 counter" data-target="40">0</div>
+                    <div class="text-2xl font-bold text-blue-300 mb-2">+40%</div>
+                    <p class="text-gray-300">Maior engajamento nas redes sociais com conteúdo otimizado</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-purple-600/20 to-purple-800/20 border border-purple-500/30 rounded-2xl p-8 text-center hover-lift">
+                    <div class="text-6xl font-black text-purple-400 mb-4 counter" data-target="65">0</div>
+                    <div class="text-2xl font-bold text-purple-300 mb-2">-65%</div>
+                    <p class="text-gray-300">Redução no tempo operacional com automação inteligente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Final -->
+    <section class="py-20 px-4 bg-gradient-to-br from-brand-red to-red-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl lg:text-6xl font-black mb-6 text-white leading-tight">
+                Sua empresa pronta para o futuro com IA e automação
+            </h2>
+            <p class="text-xl lg:text-2xl text-red-100 mb-8 leading-relaxed">
+                Não fique para trás enquanto seus concorrentes dominam o mercado. 
+                Comece sua transformação digital hoje mesmo.
+            </p>
+            <div class="space-y-4 lg:space-y-0 lg:space-x-6 lg:flex lg:justify-center">
+                <button class="w-full lg:w-auto bg-white text-brand-red font-bold py-4 px-8 rounded-xl text-lg hover:bg-gray-100 transition-all duration-300 hover-lift shadow-2xl">
+                    Começar Agora - R$ 2.997
+                </button>
+                <button class="w-full lg:w-auto bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-xl text-lg hover:bg-white hover:text-brand-red transition-all duration-300">
+                    Agendar Demonstração
+                </button>
+            </div>
+            
+            <div class="mt-12 grid grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-3xl font-black text-white counter" data-target="24">0</div>
+                    <p class="text-red-200 text-sm">Horas de Suporte</p>
+                </div>
+                <div>
+                    <div class="text-3xl font-black text-white counter" data-target="7">0</div>
+                    <p class="text-red-200 text-sm">Dias da Semana</p>
+                </div>
+                <div>
+                    <div class="text-3xl font-black text-white counter" data-target="100">0</div>
+                    <p class="text-red-200 text-sm">% de Garantia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="mb-8">
+                <h3 class="text-3xl font-black text-white mb-2">
+                    TRUE RISE <span class="text-brand-red">COMPANY</span>
+                </h3>
+                <p class="text-gray-400">Eliminando o trabalho manual com IA</p>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-gray-500 text-sm">
+                    © 2024 True Rise Company. Todos os direitos reservados. | Transformando empresas através da automação inteligente.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Counter animation
+        (function() {
+            function animateCounters() {
+                const counters = document.querySelectorAll('.counter');
+                counters.forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    const duration = 2000; // 2 seconds
+                    const increment = target / (duration / 16); // 60 FPS
+                    let current = 0;
+                    
+                    const updateCounter = () => {
+                        if (current < target) {
+                            current += increment;
+                            counter.textContent = Math.floor(current);
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = target;
+                        }
+                    };
+                    
+                    updateCounter();
+                });
+            }
+            
+            // Trigger counter animation when page loads
+            window.addEventListener('load', () => {
+                setTimeout(animateCounters, 500);
+            });
+            
+            // Smooth scroll behavior for buttons
+            document.querySelectorAll('button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // Add click effect
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                });
+            });
+            
+            // Add scroll-triggered animations
+            const observeElements = document.querySelectorAll('.animate-slide-up, .hover-lift');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationDelay = Math.random() * 0.3 + 's';
+                        entry.target.classList.add('animate-slide-up');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            observeElements.forEach(el => observer.observe(el));
+        })();
+    </script>
+</body>
+</html>

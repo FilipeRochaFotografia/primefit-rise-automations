@@ -1,0 +1,694 @@
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRUE RISE COMPANY - Eliminando o trabalho manual com IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/heroicons@2.0.16/24/outline/index.js" type="module"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'red-primary': '#e53e3e',
+                        'red-secondary': '#dc2626',
+                        'black-primary': '#0a0a0a',
+                        'black-secondary': '#1a1a1a',
+                        'gray-glass': 'rgba(255,255,255,0.1)',
+                    },
+                    backdropBlur: {
+                        'xs': '2px',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'counter': 'counter 2s ease-out',
+                    },
+                }
+            }
+        };
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(229, 62, 62, 0.3); }
+            to { box-shadow: 0 0 30px rgba(229, 62, 62, 0.6); }
+        }
+        
+        @keyframes counter {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glow-red {
+            box-shadow: 0 0 20px rgba(229, 62, 62, 0.3);
+        }
+        
+        .glow-red:hover {
+            box-shadow: 0 0 30px rgba(229, 62, 62, 0.5);
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-black-primary text-white font-inter overflow-x-hidden">
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-black-primary via-black-secondary to-black-primary">
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="animate-fade-in-up">
+                    <h1 class="text-5xl lg:text-7xl font-black mb-6 leading-tight">
+                        <span class="text-white">TRUE RISE</span>
+                        <span class="text-red-primary block">COMPANY</span>
+                    </h1>
+                    <h2 class="text-2xl lg:text-3xl font-bold mb-6 text-gray-200">
+                        Eliminando o trabalho manual com IA
+                    </h2>
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        Transformando a Primefit Suplementos em um case de sucesso replicável e escalável para empresas de todos os setores.
+                    </p>
+                    <button class="glass-card hover:glow-red px-8 py-4 rounded-2xl text-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
+                        🚀 Quero Conhecer a Solução
+                    </button>
+                </div>
+                
+                <!-- Right Content - WhatsApp Mockup -->
+                <div class="animate-fade-in lg:animate-fade-in-up lg:delay-300">
+                    <div class="glass-card rounded-3xl p-1 max-w-sm mx-auto glow-red">
+                        <!-- WhatsApp Header -->
+                        <div class="bg-gray-900 rounded-t-3xl p-4 flex items-center">
+                            <div class="w-10 h-10 bg-red-primary rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white font-bold text-xs">PF</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-white">PrimeFIT | Luiz</h3>
+                                <p class="text-gray-400 text-sm">Online agora</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Chat Messages -->
+                        <div class="bg-black-secondary rounded-b-3xl p-4 space-y-4 h-96 overflow-y-auto">
+                            <!-- Customer Message -->
+                            <div class="flex justify-end">
+                                <div class="bg-green-600 text-white px-4 py-2 rounded-2xl rounded-tr-sm max-w-xs">
+                                    <p class="text-sm">Oi, tem whey?</p>
+                                    <span class="text-xs text-green-200">6:20 PM ✓✓</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Bot Response -->
+                            <div class="flex justify-start">
+                                <div class="bg-gray-700 text-white px-4 py-2 rounded-2xl rounded-tl-sm max-w-xs">
+                                    <p class="text-sm">Oi! Temos uma ótima variedade de whey protein que você vai adorar! 🎉</p>
+                                    <span class="text-xs text-gray-400">6:21 PM</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Options -->
+                            <div class="flex justify-start">
+                                <div class="bg-gray-700 text-white px-4 py-3 rounded-2xl rounded-tl-sm max-w-xs">
+                                    <p class="text-sm mb-2">Aqui vão algumas opções:</p>
+                                    <div class="space-y-2 text-xs">
+                                        <div>
+                                            <strong>• 100% Pure Whey Refil (900g):</strong> R$139,99 (R$119,99 no Pix)
+                                            <br /><span class="text-blue-300">[Compre aqui!]</span>
+                                        </div>
+                                        <div>
+                                            <strong>• 100% WHEY GOLD STANDARD - 900g:</strong> R$350,00 (R$279,99 no Pix)
+                                            <br /><span class="text-blue-300">[Compre aqui!]</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-gray-400">6:21 PM</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Follow-up -->
+                            <div class="flex justify-start">
+                                <div class="bg-gray-700 text-white px-4 py-2 rounded-2xl rounded-tl-sm max-w-xs">
+                                    <p class="text-sm">Gostou de alguma dessas? Posso ajudar com mais opções! 💪 😊</p>
+                                    <span class="text-xs text-gray-400">6:21 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-gradient-to-b from-black-primary to-black-secondary">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6">O Problema</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Empresas perdem vendas e tempo valioso por falta de automação inteligente
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Problem Card 1 -->
+                <div class="glass-card rounded-2xl p-6 text-center hover:glow-red transition-all duration-300 animate-on-scroll">
+                    <div class="w-16 h-16 bg-red-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Respostas Lentas</h3>
+                    <p class="text-gray-300 text-sm">Clientes esperando horas por respostas no WhatsApp, perdendo interesse e migrando para concorrência.</p>
+                </div>
+                
+                <!-- Problem Card 2 -->
+                <div class="glass-card rounded-2xl p-6 text-center hover:glow-red transition-all duration-300 animate-on-scroll">
+                    <div class="w-16 h-16 bg-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Campanhas Demoradas</h3>
+                    <p class="text-gray-300 text-sm">Criação de conteúdo manual consome dias quando deveria levar minutos para publicar.</p>
+                </div>
+                
+                <!-- Problem Card 3 -->
+                <div class="glass-card rounded-2xl p-6 text-center hover:glow-red transition-all duration-300 animate-on-scroll">
+                    <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Falta de Integração</h3>
+                    <p class="text-gray-300 text-sm">Sistemas isolados gerando retrabalho e dificultando a visão completa do negócio.</p>
+                </div>
+                
+                <!-- Problem Card 4 -->
+                <div class="glass-card rounded-2xl p-6 text-center hover:glow-red transition-all duration-300 animate-on-scroll">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dados Fragmentados</h3>
+                    <p class="text-gray-300 text-sm">Falta de relatórios rápidos e ações sugeridas para tomada de decisões estratégicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 bg-gradient-to-b from-black-secondary to-black-primary">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6">Nossa Solução</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Automação inteligente que transforma seu negócio em uma máquina de vendas
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Solution 1 -->
+                <div class="glass-card rounded-2xl p-6 text-center hover:glow-red transition-all duration-300 transform hover:scale-105 animate-on-scroll">
+                    <div class="w-16 h-16 bg-red-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-red-primary">Atendimento IA 24/7</h3>
+                    <p class="text-gray-300 text-sm">ChatBot inteligente responde instantaneamente no WhatsApp e redes sociais, convertendo visitantes em vendas automaticamente.</p>
+                </div>
+                
+                <!-- Solution 2 -->
+                <div class="glass-card rounded-2xl p-6 text-center hover:glow-red transition-all duration-300 transform hover:scale-105 animate-on-scroll">
+                    <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-blue-400">Social Studio 1-Clique</h3>
+                    <p class="text-gray-300 text-sm">Criação e publicação automática de conteúdo profissional em todas as redes sociais com apenas um comando.</p>
+                </div>
+                
+                <!-- Solution 3 -->
+                <div class="glass-card rounded-2xl p-6 text-center hover:glow-red transition-all duration-300 transform hover:scale-105 animate-on-scroll">
+                    <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-purple-400">Dashboard Inteligente</h3>
+                    <p class="text-gray-300 text-sm">Painel unificado com métricas em tempo real e insights para decisões estratégicas instantâneas.</p>
+                </div>
+                
+                <!-- Solution 4 -->
+                <div class="glass-card rounded-2xl p-6 text-center hover:glow-red transition-all duration-300 transform hover:scale-105 animate-on-scroll">
+                    <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-green-400">Relatórios WhatsApp</h3>
+                    <p class="text-gray-300 text-sm">Receba relatórios diários com análises e sugeridas de ações direto no seu WhatsApp pessoal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case PrimeFit Section -->
+    <section class="py-20 bg-gradient-to-b from-black-primary to-black-secondary">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <div class="glass-card inline-block rounded-2xl p-6 mb-8">
+                    <div class="text-3xl font-black text-white">
+                        PRIME<span class="text-red-primary">FIT</span>
+                        <div class="text-sm font-medium text-gray-300 mt-1">suplementos</div>
+                    </div>
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-black mb-6">Case de Sucesso</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Veja como transformamos a PrimeFit em uma referência de automação e eficiência
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Left - Implementations -->
+                <div class="space-y-6 animate-on-scroll">
+                    <div class="glass-card rounded-2xl p-6 hover:glow-red transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-red-primary rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold">Atendimento IA 24/7</h3>
+                        </div>
+                        <p class="text-gray-300">ChatBot inteligente responde instantaneamente no WhatsApp e redes sociais, convertendo visitantes em vendas automaticamente.</p>
+                        <div class="mt-4 flex items-center text-sm text-green-400">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Respostas em menos de 3 segundos
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card rounded-2xl p-6 hover:glow-red transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold">Social Studio 1-Clique</h3>
+                        </div>
+                        <p class="text-gray-300">Criação e publicação automática de conteúdo profissional em todas as redes sociais com apenas um comando.</p>
+                        <div class="mt-4 flex items-center text-sm text-green-400">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Posts criados em 30 segundos
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card rounded-2xl p-6 hover:glow-red transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold">Dashboard Inteligente</h3>
+                        </div>
+                        <p class="text-gray-300">Painel unificado com métricas em tempo real e insights para decisões estratégicas instantâneas.</p>
+                        <div class="mt-4 flex items-center text-sm text-green-400">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Dados atualizados em tempo real
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card rounded-2xl p-6 hover:glow-red transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold">Relatórios WhatsApp</h3>
+                        </div>
+                        <p class="text-gray-300">Receba relatórios diários com análises e sugestões de ações direto no seu WhatsApp pessoal.</p>
+                        <div class="mt-4 flex items-center text-sm text-green-400">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Relatórios diários automáticos
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right - Dashboard Mockup -->
+                <div class="animate-on-scroll">
+                    <div class="glass-card rounded-3xl p-6 glow-red">
+                        <div class="bg-black-secondary rounded-2xl p-6">
+                            <h3 class="text-2xl font-bold mb-6 text-center">Dashboard em Tempo Real</h3>
+                            
+                            <!-- Metrics Grid -->
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="glass-card rounded-xl p-4 text-center">
+                                    <div class="text-3xl font-black text-green-400 mb-2">247</div>
+                                    <div class="text-sm text-gray-300">Mensagens Hoje</div>
+                                </div>
+                                <div class="glass-card rounded-xl p-4 text-center">
+                                    <div class="text-3xl font-black text-blue-400 mb-2">2.3s</div>
+                                    <div class="text-sm text-gray-300">Tempo Resposta</div>
+                                </div>
+                                <div class="glass-card rounded-xl p-4 text-center">
+                                    <div class="text-3xl font-black text-red-primary mb-2">18</div>
+                                    <div class="text-sm text-gray-300">Vendas Hoje</div>
+                                </div>
+                                <div class="glass-card rounded-xl p-4 text-center">
+                                    <div class="text-3xl font-black text-yellow-400 mb-2">89%</div>
+                                    <div class="text-sm text-gray-300">Taxa Conversão</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Activity Chart -->
+                            <div class="glass-card rounded-xl p-4">
+                                <h4 class="font-semibold mb-4">Atividade das Últimas 24h</h4>
+                                <div class="flex items-end space-x-2 h-20">
+                                    <div class="bg-red-primary rounded w-4 h-8"></div>
+                                    <div class="bg-red-primary rounded w-4 h-12"></div>
+                                    <div class="bg-red-primary rounded w-4 h-16"></div>
+                                    <div class="bg-red-primary rounded w-4 h-10"></div>
+                                    <div class="bg-red-primary rounded w-4 h-20"></div>
+                                    <div class="bg-red-primary rounded w-4 h-14"></div>
+                                    <div class="bg-red-primary rounded w-4 h-18"></div>
+                                    <div class="bg-red-primary rounded w-4 h-12"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-gradient-to-b from-black-secondary to-black-primary">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6">Como Funciona</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    4 passos simples para transformar seu negócio
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-4 gap-8">
+                    <!-- Step 1 -->
+                    <div class="text-center animate-on-scroll">
+                        <div class="relative mb-8">
+                            <div class="w-20 h-20 bg-red-primary rounded-full flex items-center justify-center mx-auto glow-red">
+                                <span class="text-2xl font-black text-white">1</span>
+                            </div>
+                            <div class="hidden lg:block absolute top-10 left-16 w-full h-0.5 bg-gradient-to-r from-red-primary to-transparent"></div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Suporte 24/7 com IA</h3>
+                        <p class="text-gray-300">Implementamos seu chatbot inteligente que responde clientes automaticamente</p>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="text-center animate-on-scroll">
+                        <div class="relative mb-8">
+                            <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-2xl font-black text-white">2</span>
+                            </div>
+                            <div class="hidden lg:block absolute top-10 left-16 w-full h-0.5 bg-gradient-to-r from-blue-500 to-transparent"></div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Social Studio</h3>
+                        <p class="text-gray-300">Sistema de criação de posts para redes sociais em segundos, não dias</p>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="text-center animate-on-scroll">
+                        <div class="relative mb-8">
+                            <div class="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-2xl font-black text-white">3</span>
+                            </div>
+                            <div class="hidden lg:block absolute top-10 left-16 w-full h-0.5 bg-gradient-to-r from-purple-500 to-transparent"></div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Dashboard Inteligente</h3>
+                        <p class="text-gray-300">Acesso a informações atualizadas e insights para decisões inteligentes</p>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="text-center animate-on-scroll">
+                        <div class="relative mb-8">
+                            <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto">
+                                <span class="text-2xl font-black text-white">4</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Relatórios WhatsApp</h3>
+                        <p class="text-gray-300">Receba análises e sugestões direto no seu WhatsApp pessoal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 bg-gradient-to-b from-black-primary to-black-secondary">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6">Resultados Esperados</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Transformação mensurável em semanas, não meses
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Result 1 -->
+                <div class="glass-card rounded-2xl p-8 text-center hover:glow-red transition-all duration-300 animate-on-scroll">
+                    <div class="text-6xl font-black text-green-400 mb-4">+30%</div>
+                    <h3 class="text-xl font-bold mb-3">Vendas Online</h3>
+                    <p class="text-gray-300">Aumento médio em vendas através de atendimento automatizado e campanhas otimizadas</p>
+                </div>
+                
+                <!-- Result 2 -->
+                <div class="glass-card rounded-2xl p-8 text-center hover:glow-red transition-all duration-300 animate-on-scroll">
+                    <div class="text-6xl font-black text-blue-400 mb-4">+40%</div>
+                    <h3 class="text-xl font-bold mb-3">Engajamento</h3>
+                    <p class="text-gray-300">Melhoria no engajamento através de conteúdo consistente e resposta imediata</p>
+                </div>
+                
+                <!-- Result 3 -->
+                <div class="glass-card rounded-2xl p-8 text-center hover:glow-red transition-all duration-300 animate-on-scroll">
+                    <div class="text-6xl font-black text-red-primary mb-4">-65%</div>
+                    <h3 class="text-xl font-bold mb-3">Tempo Operacional</h3>
+                    <p class="text-gray-300">Redução drástica no tempo gasto em tarefas manuais e repetitivas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-gradient-to-b from-black-secondary to-black-primary">
+        <div class="container mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="text-4xl lg:text-5xl font-black mb-6">Modelo de Receita</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Investimento transparente com retorno garantido
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <!-- Setup Plan -->
+                <div class="glass-card rounded-2xl p-8 hover:glow-red transition-all duration-300 animate-on-scroll">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Setup Inicial</h3>
+                        <div class="text-5xl font-black text-red-primary mb-2">R$ 2.997</div>
+                        <p class="text-gray-300">Implementação completa</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Configuração do ChatBot IA
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Integração Social Studio
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Dashboard personalizado
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Treinamento da equipe
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Monthly Plan -->
+                <div class="glass-card rounded-2xl p-8 border-2 border-red-primary glow-red animate-on-scroll">
+                    <div class="text-center mb-6">
+                        <div class="bg-red-primary text-white px-4 py-1 rounded-full text-sm font-bold mb-4 inline-block">RECOMENDADO</div>
+                        <h3 class="text-2xl font-bold mb-2">Assinatura Mensal</h3>
+                        <div class="text-5xl font-black text-red-primary mb-2">R$ 897</div>
+                        <p class="text-gray-300">Por mês</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Monitoramento 24/7
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Otimizações mensais
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Suporte prioritário
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Atualizações automáticas
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-red-primary to-red-secondary">
+        <div class="container mx-auto px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto animate-on-scroll">
+                <h2 class="text-4xl lg:text-6xl font-black mb-6 text-white">
+                    Sua empresa pronta para o futuro com IA e automação
+                </h2>
+                <p class="text-xl lg:text-2xl text-white mb-8 opacity-90">
+                    Não fique para trás. Transforme seu negócio hoje mesmo.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-white text-red-primary px-8 py-4 rounded-2xl text-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+                        🚀 Quero Minha Demonstração Gratuita
+                    </button>
+                    <button class="glass-card border-white/30 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                        📞 Falar com Especialista
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Scroll Animation Observer
+        (function() {
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            animateElements.forEach(el => observer.observe(el));
+        })();
+
+        // Counter Animation
+        (function() {
+            const counters = document.querySelectorAll('[data-counter]');
+            
+            const animateCounter = (element) => {
+                const target = parseInt(element.getAttribute('data-counter'));
+                const duration = 2000;
+                const start = 0;
+                const startTime = Date.now();
+                
+                const updateCounter = () => {
+                    const now = Date.now();
+                    const progress = Math.min((now - startTime) / duration, 1);
+                    const current = Math.floor(progress * (target - start) + start);
+                    
+                    element.textContent = current + (element.textContent.includes('%') ? '%' : '');
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    }
+                };
+                
+                updateCounter();
+            };
+            
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounter(entry.target);
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            counters.forEach(counter => counterObserver.observe(counter));
+        })();
+    </script>
+</body>
+</html>

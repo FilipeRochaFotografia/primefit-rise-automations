@@ -1,0 +1,1178 @@
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRUE RISE COMPANY - Automação com IA para Empresas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        'true-black': '#000000',
+                        'true-red': '#DC2626',
+                        'dark-gray': '#1F1F1F',
+                        'medium-gray': '#2A2A2A',
+                        'light-gray': '#404040',
+                        'success-green': '#10B981',
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 0.8s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'slide-left': 'slideLeft 0.8s ease-out',
+                        'bounce-subtle': 'bounceSubtle 2s infinite',
+                        'pulse-slow': 'pulse 3s infinite',
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideLeft: {
+                            '0%': { opacity: '0', transform: 'translateX(30px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' }
+                        },
+                        bounceSubtle: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-5px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+        }
+        .btn-ios {
+            background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 14px 0 rgba(220, 38, 38, 0.3);
+        }
+        .btn-ios:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px 0 rgba(220, 38, 38, 0.4);
+            background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .whatsapp-chat {
+            background: linear-gradient(135deg, #1F2937 0%, #374151 100%);
+            border-radius: 20px;
+            max-width: 350px;
+        }
+        .chat-bubble-sent {
+            background: #DC2626;
+            border-radius: 18px 18px 4px 18px;
+        }
+        .chat-bubble-received {
+            background: #374151;
+            border-radius: 18px 18px 18px 4px;
+        }
+        .section-fade {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #FFFFFF 0%, #DC2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .metric-counter {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="font-inter text-white antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-true-black/80 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-true-red rounded-lg flex items-center justify-center">
+                        <i class="fas fa-rocket text-white text-lg"></i>
+                    </div>
+                    <h1 class="text-xl font-bold font-poppins">TRUE RISE</h1>
+                </div>
+                <button class="btn-ios px-6 py-3 text-white font-semibold text-sm">
+                    Falar com Especialista
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center pt-16 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-true-black via-dark-gray to-medium-gray opacity-80"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- @COMPONENT: HeroContent -->
+                <div class="space-y-8 animate-fade-in">
+                    <div class="space-y-4">
+                        <h1 class="text-5xl lg:text-7xl font-black font-poppins leading-tight">
+                            <span class="gradient-text">TRUE RISE</span><br>
+                            <span class="text-white">COMPANY</span>
+                        </h1>
+                        <h2 class="text-2xl lg:text-3xl font-bold text-gray-300">
+                            Eliminando o trabalho manual com IA
+                        </h2>
+                        <p class="text-lg text-gray-400 max-w-lg leading-relaxed">
+                            Transformando a <span class="text-true-red font-semibold">Primefit Suplementos</span> em um case de sucesso replicável e escalável para empresas de todos os setores.
+                        </p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="btn-ios px-8 py-4 text-white font-bold text-lg flex items-center justify-center space-x-2">
+                            <span>Quero Conhecer a Solução</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="border-2 border-gray-600 hover:border-true-red px-8 py-4 rounded-xl text-white font-semibold transition-all duration-300">
+                            Ver Case Primefit
+                        </button>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-800">
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-success-green metric-counter">+30%</div>
+                            <div class="text-sm text-gray-400">Vendas Online</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-true-red metric-counter">-65%</div>
+                            <div class="text-sm text-gray-400">Tempo Operacional</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-black text-blue-400 metric-counter">24/7</div>
+                            <div class="text-sm text-gray-400">Atendimento IA</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: HeroContent -->
+
+                <!-- @COMPONENT: WhatsAppMockup -->
+                <div class="flex justify-center lg:justify-end animate-slide-left">
+                    <div class="whatsapp-chat p-6 shadow-2xl">
+                        <!-- Chat Header -->
+                        <div class="flex items-center space-x-3 pb-4 border-b border-gray-600">
+                            <div class="w-10 h-10 bg-true-red rounded-full flex items-center justify-center">
+                                <i class="fas fa-dumbbell text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-white">PrimeFIT | Luiz</div>
+                                <div class="text-xs text-green-400">Online</div>
+                            </div>
+                        </div>
+
+                        <!-- Chat Messages -->
+                        <div class="space-y-4 py-6">
+                            <div class="flex justify-end">
+                                <div class="chat-bubble-sent p-3 text-white text-sm max-w-xs">
+                                    Oi, tem whey?
+                                    <div class="text-xs text-gray-300 mt-1">6:20 PM ✓✓</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex justify-start">
+                                <div class="chat-bubble-received p-3 text-white text-sm max-w-xs">
+                                    Oi! Temos uma ótima variedade de whey protein que você vai adorar! 🎉
+                                    <div class="text-xs text-gray-400 mt-1">6:21 PM</div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-start">
+                                <div class="chat-bubble-received p-3 text-white text-sm max-w-xs">
+                                    Aqui vão algumas opções:<br><br>
+                                    • <strong>100% Pure Whey Refil (900g)*</strong>: R$139,99 (R$119,99 no Pix). <span class="text-blue-300">[Compre aqui!]</span><br><br>
+                                    • <strong>100% WHEY GOLD STANDARD - 900g*</strong>: R$350,00 (R$279,99 no Pix). <span class="text-blue-300">[Compre aqui!]</span>
+                                    <div class="text-xs text-gray-400 mt-1">6:21 PM</div>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-start">
+                                <div class="chat-bubble-received p-3 text-white text-sm max-w-xs">
+                                    Gostou de alguma dessas? Posso ajudar com mais opções! 💪 😊
+                                    <div class="text-xs text-gray-400 mt-1">6:21 PM</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Typing Indicator -->
+                        <div class="flex items-center space-x-2 text-gray-400 text-sm">
+                            <div class="flex space-x-1">
+                                <div class="w-2 h-2 bg-gray-500 rounded-full animate-bounce"></div>
+                                <div class="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style="animation-delay: 0.1s"></div>
+                                <div class="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                            </div>
+                            <span>IA digitando...</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- @END_COMPONENT: WhatsAppMockup -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-dark-gray/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-fade text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black font-poppins mb-6">
+                    O <span class="text-true-red">Problema</span> que Toda Empresa Enfrenta
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Milhares de vendas perdidas e horas desperdiçadas por falta de automação inteligente
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pain Point 1 -->
+                <div class="section-fade card-hover bg-medium-gray p-8 rounded-2xl border border-gray-700">
+                    <div class="w-16 h-16 bg-true-red/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-true-red text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Respostas Lentas</h3>
+                    <p class="text-gray-400">Clientes esperando horas por respostas no WhatsApp, perdendo interesse e migrando para concorrência.</p>
+                </div>
+
+                <!-- Pain Point 2 -->
+                <div class="section-fade card-hover bg-medium-gray p-8 rounded-2xl border border-gray-700">
+                    <div class="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-turtle text-orange-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Campanhas Demoradas</h3>
+                    <p class="text-gray-400">Criação de conteúdo manual consome dias quando deveria levar minutos para publicar.</p>
+                </div>
+
+                <!-- Pain Point 3 -->
+                <div class="section-fade card-hover bg-medium-gray p-8 rounded-2xl border border-gray-700">
+                    <div class="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-unlink text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Falta de Integração</h3>
+                    <p class="text-gray-400">Sistemas isolados gerando retrabalho e dificultando a visão completa do negócio.</p>
+                </div>
+
+                <!-- Pain Point 4 -->
+                <div class="section-fade card-hover bg-medium-gray p-8 rounded-2xl border border-gray-700">
+                    <div class="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line-down text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Dados Fragmentados</h3>
+                    <p class="text-gray-400">Falta de relatórios rápidos e ações sugeridas para tomada de decisões estratégicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-fade text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black font-poppins mb-6">
+                    Nossa <span class="text-true-red">Solução</span> Completa
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Automação inteligente que transforma processos manuais em resultados exponenciais
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Solution 1 -->
+                <div class="section-fade card-hover bg-gradient-to-br from-medium-gray to-dark-gray p-8 rounded-2xl border border-gray-700">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-true-red/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-comments text-true-red text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Atendimento IA 24/7</h3>
+                            <p class="text-gray-400 mb-4">Chatbot inteligente responde instantaneamente no WhatsApp e redes sociais, convertendo visitantes em vendas automaticamente.</p>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li class="flex items-center space-x-2">
+                                    <i class="fas fa-check text-success-green"></i>
+                                    <span>Respostas em menos de 3 segundos</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i class="fas fa-check text-success-green"></i>
+                                    <span>Integração WhatsApp Business API</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i class="fas fa-check text-success-green"></i>
+                                    <span>Processamento de linguagem natural</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="section-fade card-hover bg-gradient-to-br from-medium-gray to-dark-gray p-8 rounded-2xl border border-gray-700">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-bolt text-blue-500 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Social Studio 1-Clique</h3>
+                            <p class="text-gray-400 mb-4">Criação e publicação automática de conteúdo profissional em todas as redes sociais com apenas um comando.</p>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li class="flex items-center space-x-2">
+                                    <i class="fas fa-check text-success-green"></i>
+                                    <span>Posts criados em 30 segundos</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i class="fas fa-check text-success-green"></i>
+                                    <span>Agendamento inteligente</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i class="fas fa-check text-success-green"></i>
+                                    <span>Templates personalizados</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="section-fade card-hover bg-gradient-to-br from-medium-gray to-dark-gray p-8 rounded-2xl border border-gray-700">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-chart-pie text-purple-500 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Dashboard Inteligente</h3>
+                            <p class="text-gray-400 mb-4">Painel unificado com métricas em tempo real e insights acionáveis para decisões estratégicas imediatas.</p>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li class="flex items-center space-x-2">
+                                    <i class="fas fa-check text-success-green"></i>
+                                    <span>Dados atualizados em tempo real</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i class="fas fa-check text-success-green"></i>
+                                    <span>Alertas personalizados</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i class="fas fa-check text-success-green"></i>
+                                    <span>Relatórios automatizados</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Solution 4 -->
+                <div class="section-fade card-hover bg-gradient-to-br from-medium-gray to-dark-gray p-8 rounded-2xl border border-gray-700">
+                    <div class="flex items-start space-x-4">
+                        <div class="w-16 h-16 bg-success-green/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-mobile-alt text-success-green text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Relatórios WhatsApp</h3>
+                            <p class="text-gray-400 mb-4">Receba relatórios diários com análises e sugestões de ações direto no seu WhatsApp pessoal.</p>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li class="flex items-center space-x-2">
+                                    <i class="fas fa-check text-success-green"></i>
+                                    <span>Relatórios diários automáticos</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i class="fas fa-check text-success-green"></i>
+                                    <span>Ações sugeridas por IA</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i class="fas fa-check text-success-green"></i>
+                                    <span>Alertas de oportunidades</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Primefit Section -->
+    <section class="py-20 bg-dark-gray/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-fade text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black font-poppins mb-6">
+                    Case de Sucesso: <span class="text-true-red">Primefit Suplementos</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Como transformamos uma empresa de suplementos em referência de automação no setor
+                </p>
+            </div>
+
+            <!-- Primefit Logo -->
+            <div class="section-fade text-center mb-12">
+                <div class="inline-flex items-center space-x-4 bg-medium-gray p-6 rounded-2xl border border-gray-700">
+                    <div class="w-16 h-16 bg-true-red rounded-xl flex items-center justify-center">
+                        <i class="fas fa-dumbbell text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">PRIMEFIT</h3>
+                        <p class="text-gray-400">Suplementos Premium</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Implementation Results -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="section-fade card-hover bg-medium-gray p-6 rounded-2xl border border-gray-700 text-center">
+                    <div class="text-4xl font-black text-success-green mb-2 metric-counter">+127%</div>
+                    <div class="text-sm text-gray-400">Conversões WhatsApp</div>
+                </div>
+                <div class="section-fade card-hover bg-medium-gray p-6 rounded-2xl border border-gray-700 text-center">
+                    <div class="text-4xl font-black text-blue-400 mb-2 metric-counter">-80%</div>
+                    <div class="text-sm text-gray-400">Tempo de Resposta</div>
+                </div>
+                <div class="section-fade card-hover bg-medium-gray p-6 rounded-2xl border border-gray-700 text-center">
+                    <div class="text-4xl font-black text-purple-400 mb-2 metric-counter">+250%</div>
+                    <div class="text-sm text-gray-400">Engajamento Social</div>
+                </div>
+                <div class="section-fade card-hover bg-medium-gray p-6 rounded-2xl border border-gray-700 text-center">
+                    <div class="text-4xl font-black text-true-red mb-2 metric-counter">24/7</div>
+                    <div class="text-sm text-gray-400">Disponibilidade</div>
+                </div>
+            </div>
+
+            <!-- Implementation Features -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="section-fade space-y-6">
+                    <h3 class="text-2xl font-bold mb-6">Implementações Realizadas</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4 p-4 bg-medium-gray rounded-xl border border-gray-700">
+                            <div class="w-10 h-10 bg-true-red/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-robot text-true-red"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Chatbot de Vendas Inteligente</h4>
+                                <p class="text-sm text-gray-400">IA treinada no catálogo completo de produtos</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 bg-medium-gray rounded-xl border border-gray-700">
+                            <div class="w-10 h-10 bg-blue-500/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-share-alt text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Social Studio Automatizado</h4>
+                                <p class="text-sm text-gray-400">Criação de posts para Instagram e Facebook</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 bg-medium-gray rounded-xl border border-gray-700">
+                            <div class="w-10 h-10 bg-purple-500/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-chart-bar text-purple-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Dashboard Executivo</h4>
+                                <p class="text-sm text-gray-400">Métricas de vendas e atendimento em tempo real</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 p-4 bg-medium-gray rounded-xl border border-gray-700">
+                            <div class="w-10 h-10 bg-success-green/20 rounded-full flex items-center justify-center">
+                                <i class="fas fa-file-alt text-success-green"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Relatórios Automatizados</h4>
+                                <p class="text-sm text-gray-400">Análises diárias via WhatsApp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Before/After Comparison -->
+                <div class="section-fade">
+                    <h3 class="text-2xl font-bold mb-6">Antes vs Depois</h3>
+                    <div class="space-y-6">
+                        <!-- Before -->
+                        <div class="bg-red-900/20 border border-red-800 rounded-xl p-6">
+                            <h4 class="font-semibold text-red-400 mb-4 flex items-center">
+                                <i class="fas fa-times-circle mr-2"></i>
+                                Antes da Automação
+                            </h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li>• Respostas manuais com delay de horas</li>
+                                <li>• Criação de posts levava dias</li>
+                                <li>• Relatórios semanais desatualizados</li>
+                                <li>• Perda de leads fora do horário comercial</li>
+                                <li>• Equipe sobrecarregada com tarefas repetitivas</li>
+                            </ul>
+                        </div>
+
+                        <!-- After -->
+                        <div class="bg-success-green/20 border border-success-green rounded-xl p-6">
+                            <h4 class="font-semibold text-success-green mb-4 flex items-center">
+                                <i class="fas fa-check-circle mr-2"></i>
+                                Depois da Automação
+                            </h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li>• Respostas instantâneas 24/7</li>
+                                <li>• Posts criados e publicados em minutos</li>
+                                <li>• Relatórios diários em tempo real</li>
+                                <li>• Captação contínua de leads</li>
+                                <li>• Equipe focada em estratégia e crescimento</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-fade text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black font-poppins mb-6">
+                    Como <span class="text-true-red">Funciona</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Processo simples e eficiente para transformar sua empresa em 4 etapas
+                </p>
+            </div>
+
+            <!-- Process Steps -->
+            <div class="relative">
+                <!-- Connection Line -->
+                <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-true-red via-blue-500 to-success-green transform -translate-y-1/2 z-0"></div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+                    <!-- Step 1 -->
+                    <div class="section-fade card-hover bg-medium-gray p-8 rounded-2xl border border-gray-700 text-center">
+                        <div class="w-20 h-20 bg-true-red rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <span class="text-2xl font-black text-white">1</span>
+                        </div>
+                        <div class="w-16 h-16 bg-true-red/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-headset text-true-red text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Suporte 24/7 com IA</h3>
+                        <p class="text-gray-400">Implementamos chatbot inteligente para atender clientes instantaneamente em todas as plataformas.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="section-fade card-hover bg-medium-gray p-8 rounded-2xl border border-gray-700 text-center">
+                        <div class="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <span class="text-2xl font-black text-white">2</span>
+                        </div>
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-magic text-blue-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Social Studio 1-Clique</h3>
+                        <p class="text-gray-400">Criação automática de conteúdo profissional para redes sociais com um comando simples.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="section-fade card-hover bg-medium-gray p-8 rounded-2xl border border-gray-700 text-center">
+                        <div class="w-20 h-20 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <span class="text-2xl font-black text-white">3</span>
+                        </div>
+                        <div class="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-chart-line text-purple-500 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Dashboard Inteligente</h3>
+                        <p class="text-gray-400">Painel unificado com informações atualizadas em tempo real para decisões estratégicas.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="section-fade card-hover bg-medium-gray p-8 rounded-2xl border border-gray-700 text-center">
+                        <div class="w-20 h-20 bg-success-green rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                            <span class="text-2xl font-black text-white">4</span>
+                        </div>
+                        <div class="w-16 h-16 bg-success-green/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-mobile-alt text-success-green text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Relatórios WhatsApp</h3>
+                        <p class="text-gray-400">Receba análises diárias e sugestões de ações direto no seu WhatsApp pessoal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Potential Section -->
+    <section class="py-20 bg-dark-gray/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-fade text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black font-poppins mb-6">
+                    Potencial de <span class="text-true-red">Mercado</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    O mercado de automação e IA está explodindo, e o Brasil oferece oportunidades únicas
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Market Data -->
+                <div class="section-fade space-y-8">
+                    <div class="bg-medium-gray p-8 rounded-2xl border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-6">Crescimento Global da IA</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300">Mercado de IA em 2023</span>
+                                <span class="text-2xl font-black text-success-green">$150B</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-success-green to-blue-500 h-3 rounded-full" style="width: 60%"></div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300">Projeção para 2030</span>
+                                <span class="text-2xl font-black text-true-red">$1.35T</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="bg-gradient-to-r from-true-red to-purple-500 h-3 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-medium-gray p-8 rounded-2xl border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-6">Oportunidade no Brasil</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <div class="text-3xl font-black text-blue-400 mb-2">6.2M</div>
+                                <div class="text-sm text-gray-400">PMEs no Brasil</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-black text-success-green mb-2">23%</div>
+                                <div class="text-sm text-gray-400">Crescimento IA/ano</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-black text-purple-400 mb-2">R$45B</div>
+                                <div class="text-sm text-gray-400">Potencial de mercado</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-3xl font-black text-true-red mb-2">12%</div>
+                                <div class="text-sm text-gray-400">Empresas automatizadas</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Graph -->
+                <div class="section-fade">
+                    <div class="bg-medium-gray p-8 rounded-2xl border border-gray-700">
+                        <h3 class="text-2xl font-bold mb-8 text-center">Crescimento da Automação</h3>
+                        <div class="space-y-6">
+                            <!-- Year bars -->
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm text-gray-400 w-12">2020</span>
+                                <div class="flex-1 bg-gray-700 rounded-full h-4">
+                                    <div class="bg-gradient-to-r from-gray-500 to-gray-400 h-4 rounded-full" style="width: 20%"></div>
+                                </div>
+                                <span class="text-sm text-gray-300 w-16">R$8B</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm text-gray-400 w-12">2022</span>
+                                <div class="flex-1 bg-gray-700 rounded-full h-4">
+                                    <div class="bg-gradient-to-r from-blue-500 to-blue-400 h-4 rounded-full" style="width: 40%"></div>
+                                </div>
+                                <span class="text-sm text-gray-300 w-16">R$18B</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm text-gray-400 w-12">2024</span>
+                                <div class="flex-1 bg-gray-700 rounded-full h-4">
+                                    <div class="bg-gradient-to-r from-success-green to-green-400 h-4 rounded-full" style="width: 70%"></div>
+                                </div>
+                                <span class="text-sm text-gray-300 w-16">R$32B</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-sm text-gray-400 w-12">2026</span>
+                                <div class="flex-1 bg-gray-700 rounded-full h-4">
+                                    <div class="bg-gradient-to-r from-true-red to-red-400 h-4 rounded-full animate-pulse-slow" style="width: 100%"></div>
+                                </div>
+                                <span class="text-sm text-gray-300 w-16">R$45B</span>
+                            </div>
+                        </div>
+                        <p class="text-center text-gray-400 mt-6 text-sm">
+                            <strong class="text-true-red">88%</strong> das PMEs ainda não utilizam automação inteligente
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Revenue Model Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-fade text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black font-poppins mb-6">
+                    Modelo de <span class="text-true-red">Receita</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Planos flexíveis e escaláveis para empresas de todos os tamanhos
+                </p>
+            </div>
+
+            <!-- Pricing Table -->
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Starter Plan -->
+                <div class="section-fade card-hover bg-medium-gray p-8 rounded-2xl border border-gray-700">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-4">Starter</h3>
+                        <div class="text-4xl font-black text-gray-300 mb-6">
+                            R$ <span class="gradient-text">2.5K</span>
+                        </div>
+                        <p class="text-gray-400 mb-8">Setup inicial + 3 meses</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">Chatbot WhatsApp básico</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">Social Studio limitado</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">Dashboard básico</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">Suporte por email</span>
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-gray-600 hover:border-true-red py-3 rounded-xl text-white font-semibold transition-all duration-300">
+                        Escolher Plano
+                    </button>
+                </div>
+
+                <!-- Professional Plan (Highlighted) -->
+                <div class="section-fade card-hover bg-gradient-to-br from-true-red/20 to-medium-gray p-8 rounded-2xl border-2 border-true-red relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-true-red text-white px-4 py-1 rounded-full text-sm font-bold">RECOMENDADO</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-4">Professional</h3>
+                        <div class="text-4xl font-black text-white mb-6">
+                            R$ <span class="gradient-text">897</span>
+                            <span class="text-lg text-gray-400">/mês</span>
+                        </div>
+                        <p class="text-gray-400 mb-8">Solução completa</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">Chatbot IA avançado</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">Social Studio completo</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">Dashboard avançado</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">Relatórios WhatsApp</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">Suporte prioritário</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">Treinamento incluído</span>
+                        </li>
+                    </ul>
+                    <button class="w-full btn-ios py-3 text-white font-bold text-lg">
+                        Começar Agora
+                    </button>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="section-fade card-hover bg-medium-gray p-8 rounded-2xl border border-gray-700">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+                        <div class="text-4xl font-black text-gray-300 mb-6">
+                            <span class="gradient-text">Custom</span>
+                        </div>
+                        <p class="text-gray-400 mb-8">Sob demanda</p>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">Tudo do Professional</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">Integrações customizadas</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">White-label</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">Dedicado 24/7</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fas fa-check text-success-green"></i>
+                            <span class="text-gray-300">SLA garantido</span>
+                        </li>
+                    </ul>
+                    <button class="w-full border-2 border-gray-600 hover:border-true-red py-3 rounded-xl text-white font-semibold transition-all duration-300">
+                        Falar com Vendas
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expected Results Section -->
+    <section class="py-20 bg-dark-gray/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-fade text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-black font-poppins mb-6">
+                    Resultados <span class="text-true-red">Esperados</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Métricas comprovadas baseadas em implementações reais de clientes
+                </p>
+            </div>
+
+            <!-- Results Cards -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Sales Growth -->
+                <div class="section-fade card-hover bg-gradient-to-br from-success-green/20 to-medium-gray p-8 rounded-2xl border border-success-green/30">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-success-green/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-chart-line text-success-green text-3xl"></i>
+                        </div>
+                        <div class="text-5xl font-black text-success-green mb-4 metric-counter">+30%</div>
+                        <h3 class="text-xl font-bold mb-2">Vendas Online</h3>
+                        <p class="text-gray-400">Aumento médio nas conversões através de atendimento automatizado 24/7</p>
+                    </div>
+                </div>
+
+                <!-- Engagement -->
+                <div class="section-fade card-hover bg-gradient-to-br from-blue-500/20 to-medium-gray p-8 rounded-2xl border border-blue-500/30">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-heart text-blue-500 text-3xl"></i>
+                        </div>
+                        <div class="text-5xl font-black text-blue-500 mb-4 metric-counter">+40%</div>
+                        <h3 class="text-xl font-bold mb-2">Engajamento</h3>
+                        <p class="text-gray-400">Melhoria na interação com clientes através de conteúdo automatizado</p>
+                    </div>
+                </div>
+
+                <!-- Time Saved -->
+                <div class="section-fade card-hover bg-gradient-to-br from-true-red/20 to-medium-gray p-8 rounded-2xl border border-true-red/30">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-true-red/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-clock text-true-red text-3xl"></i>
+                        </div>
+                        <div class="text-5xl font-black text-true-red mb-4 metric-counter">-65%</div>
+                        <h3 class="text-xl font-bold mb-2">Tempo Operacional</h3>
+                        <p class="text-gray-400">Redução em tarefas manuais, liberando equipe para estratégia</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Before/After Comparison Chart -->
+            <div class="section-fade bg-medium-gray p-8 rounded-2xl border border-gray-700">
+                <h3 class="text-2xl font-bold text-center mb-8">Comparativo: Antes vs Depois da Automação</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Before -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-red-400 mb-6 flex items-center">
+                            <i class="fas fa-times-circle mr-2"></i>
+                            Processos Manuais
+                        </h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300">Tempo de Resposta</span>
+                                <span class="text-red-400 font-bold">2-8 horas</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="bg-red-500 h-3 rounded-full" style="width: 20%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300">Conversão de Leads</span>
+                                <span class="text-red-400 font-bold">12%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="bg-red-500 h-3 rounded-full" style="width: 12%"></div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300">Posts por Semana</span>
+                                <span class="text-red-400 font-bold">3-5</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="bg-red-500 h-3 rounded-full" style="width: 25%"></div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300">Horas Semanais em Tarefas Repetitivas</span>
+                                <span class="text-red-400 font-bold">25h</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="bg-red-500 h-3 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- After -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-success-green mb-6 flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            Automação Inteligente
+                        </h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300">Tempo de Resposta</span>
+                                <span class="text-success-green font-bold">3 segundos</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="bg-success-green h-3 rounded-full" style="width: 100%"></div>
+                            </div>
+                            
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300">Conversão de Leads</span>
+                                <span class="text-success-green font-bold">32%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="bg-success-green h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300">Posts por Semana</span>
+                                <span class="text-success-green font-bold">15-20</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="bg-success-green h-3 rounded-full" style="width: 100%"></div>
+                            </div>
+
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300">Horas Semanais em Tarefas Repetitivas</span>
+                                <span class="text-success-green font-bold">5h</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="bg-success-green h-3 rounded-full" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-true-red via-red-700 to-red-900 relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="section-fade">
+                <h2 class="text-4xl lg:text-6xl font-black font-poppins mb-6 text-white">
+                    Sua empresa pronta para o futuro
+                </h2>
+                <h3 class="text-2xl lg:text-3xl font-bold mb-8 text-red-100">
+                    com IA e Automação Inteligente
+                </h3>
+                <p class="text-xl text-red-100 max-w-3xl mx-auto mb-12 leading-relaxed">
+                    Não fique para trás enquanto seus concorrentes automatizam e crescem. 
+                    Transforme sua empresa hoje e veja resultados em 30 dias.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+                    <button class="bg-white text-true-red font-bold text-lg px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <i class="fas fa-rocket"></i>
+                        <span>Começar Transformação Agora</span>
+                    </button>
+                    <button class="border-2 border-white text-white font-semibold text-lg px-8 py-4 rounded-xl hover:bg-white hover:text-true-red transition-all duration-300">
+                        Agendar Demonstração Gratuita
+                    </button>
+                </div>
+
+                <!-- Urgency Elements -->
+                <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto text-center">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                        <i class="fas fa-clock text-3xl text-white mb-3"></i>
+                        <h4 class="font-bold text-white mb-2">Setup em 48h</h4>
+                        <p class="text-red-100 text-sm">Implementação rápida e eficiente</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                        <i class="fas fa-shield-alt text-3xl text-white mb-3"></i>
+                        <h4 class="font-bold text-white mb-2">Garantia 30 dias</h4>
+                        <p class="text-red-100 text-sm">Satisfação garantida ou dinheiro de volta</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                        <i class="fas fa-users text-3xl text-white mb-3"></i>
+                        <h4 class="font-bold text-white mb-2">Suporte Dedicado</h4>
+                        <p class="text-red-100 text-sm">Equipe especializada 24/7</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="mt-12 pt-8 border-t border-white/20">
+                    <p class="text-red-100 mb-4">Fale conosco agora:</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="#" class="flex items-center space-x-2 text-white hover:text-red-200 transition-colors">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            <span class="font-semibold">(11) 99999-9999</span>
+                        </a>
+                        <div class="hidden sm:block w-px h-6 bg-white/30"></div>
+                        <a href="#" class="flex items-center space-x-2 text-white hover:text-red-200 transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                            <span class="font-semibold">contato@truerise.com.br</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-true-black py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                    <div class="w-10 h-10 bg-true-red rounded-lg flex items-center justify-center">
+                        <i class="fas fa-rocket text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold font-poppins text-white">TRUE RISE COMPANY</h3>
+                        <p class="text-sm text-gray-400">Eliminando o trabalho manual com IA</p>
+                    </div>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-true-red transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-true-red transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-true-red transition-colors">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2024 True Rise Company. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-true-red rounded-full flex items-center justify-center text-white shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-red-700 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // TODO: Implement business logic, API calls, or state management
+        (function() {
+            // Intersection Observer for fade-in animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all sections with fade animation
+            document.querySelectorAll('.section-fade').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Scroll to top functionality
+            const scrollToTopBtn = document.getElementById('scrollToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.classList.remove('opacity-0', 'invisible');
+                } else {
+                    scrollToTopBtn.classList.add('opacity-0', 'invisible');
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Animated counters
+            const animateCounters = () => {
+                const counters = document.querySelectorAll('.metric-counter');
+                counters.forEach(counter => {
+                    const target = parseInt(counter.textContent.replace(/[^\d]/g, ''));
+                    if (target && !counter.classList.contains('animated')) {
+                        counter.classList.add('animated');
+                        let current = 0;
+                        const increment = target / 50;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                current = target;
+                                clearInterval(timer);
+                            }
+                            const prefix = counter.textContent.match(/[^\d]/g)?.[0] || '';
+                            const suffix = counter.textContent.match(/[^\d]/g)?.slice(1)?.join('') || '';
+                            counter.textContent = prefix + Math.floor(current) + suffix;
+                        }, 30);
+                    }
+                });
+            };
+
+            // Trigger counter animation when visible
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.metric-counter').forEach(counter => {
+                counterObserver.observe(counter);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

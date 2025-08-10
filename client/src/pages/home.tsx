@@ -4,6 +4,12 @@ import WhatsAppMockup from "@/components/WhatsAppMockup";
 import SocialStudioMockup from "@/components/SocialStudioMockup";
 import DashboardMockup from "@/components/DashboardMockup";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import HeroSection3D from "@/components/sections/HeroSection3D";
+import FeaturesSection from "@/components/sections/FeaturesSection";
+import ToolsSection from "@/components/sections/ToolsSection";
+import InteractiveButton from "@/components/ui/InteractiveButton";
+import { ProblemCardsGrid } from "@/components/interactive/ProblemCard3D";
+
 
 export default function Home() {
   const scrollToSection = (sectionId: string) => {
@@ -32,53 +38,24 @@ export default function Home() {
               <button onClick={() => scrollToSection('como-funciona')} className="hover:text-red-400 transition-colors">Como Funciona</button>
               <button onClick={() => scrollToSection('resultados')} className="hover:text-red-400 transition-colors">Resultados</button>
             </nav>
-            <Button className="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-red-500/25">
+            <Button 
+              onClick={() => scrollToSection('precos')}
+              className="bg-red-600 hover:bg-red-700 px-6 py-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-red-500/25"
+            >
               Contato
             </Button>
           </div>
         </div>
       </motion.header>
 
-      {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-red-500 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-red-700 rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
-          >
-            <h1 className="text-5xl lg:text-7xl font-black leading-tight">
-              <span className="text-white">TRUE RISE</span><br/>
-              <span className="text-red-500 glow-text">COMPANY</span>
-            </h1>
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-300">
-              Eliminando o trabalho manual com <span className="text-red-400">IA</span>
-            </h2>
-            <p className="text-xl text-gray-400 leading-relaxed max-w-2xl">
-              Transformando a <strong className="text-white">Primefit Suplementos</strong> em um case de sucesso <strong className="text-red-400">replicável para qualquer negócio</strong>. IA personalizada e adaptável para seu setor.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/30 animate-glow">
-                <i className="fas fa-rocket mr-2"></i>
-                Quero Conhecer a Solução
-              </Button>
-              <Button variant="outline" className="glass-effect hover:bg-white/10 px-8 py-4 rounded-2xl font-semibold transition-all duration-300">
-                <i className="fas fa-play mr-2"></i>
-                Ver Demonstração
-              </Button>
-            </div>
-          </motion.div>
-          
-          <WhatsAppMockup />
-        </div>
-      </section>
+      {/* Hero Section 3D */}
+      <HeroSection3D />
+
+      {/* Features Section */}
+      <FeaturesSection />
+
+      {/* Tools Section */}
+      <ToolsSection />
 
       {/* Problem Section */}
       <motion.section 
@@ -98,131 +75,11 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: "fas fa-clock",
-                color: "red",
-                title: "Respostas Lentas",
-                description: "Clientes esperando horas por respostas no WhatsApp, perdendo interesse e migrando para concorrência."
-              },
-              {
-                icon: "fas fa-snail",
-                color: "yellow",
-                title: "Campanhas Demoradas",
-                description: "Criação de conteúdo manual consome dias quando deveria levar minutos para publicar."
-              },
-              {
-                icon: "fas fa-exclamation-triangle",
-                color: "orange",
-                title: "Falta de Integração",
-                description: "Sistemas isolados gerando retrabalho e dificultando a visão completa do negócio."
-              },
-              {
-                icon: "fas fa-chart-line",
-                color: "purple",
-                title: "Dados Fragmentados",
-                description: "Falta de relatórios rápidos e ações sugeridas para tomada de decisões estratégicas."
-              }
-            ].map((problem, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 hover:bg-gray-800/80 hover:border-gray-600/50 transition-all duration-300 group"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br from-${problem.color}-500 to-${problem.color}-700 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <i className={`${problem.icon} text-white text-2xl`}></i>
-                </div>
-                <h3 className={`text-xl font-bold mb-3 text-${problem.color}-400`}>{problem.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{problem.description}</p>
-              </motion.div>
-            ))}
-          </div>
+          <ProblemCardsGrid />
         </div>
       </motion.section>
 
-      {/* Solution Section */}
-      <motion.section 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        id="solucao" 
-        className="py-20 relative"
-      >
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black mb-6">
-              Nossa <span className="text-red-500 glow-text">Solução</span>
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Automação inteligente <strong className="text-white">personalizável para qualquer setor</strong> - e-commerce, serviços, consultorias, clínicas e muito mais
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {/* Solution Cards */}
-            <div className="space-y-6">
-              {[
-                {
-                  icon: "fas fa-comments",
-                  color: "red",
-                  title: "Atendimento IA 24/7",
-                  description: "IA treinada especificamente para seu negócio responde em 20 segundos no WhatsApp e redes sociais, convertendo visitantes em vendas.",
-                  features: ["IA personalizada para seu setor", "Integração WhatsApp Business API", "Treinamento com seus produtos/serviços"]
-                },
-                {
-                  icon: "fas fa-bolt",
-                  color: "blue",
-                  title: "Social Studio 1-Clique",
-                  description: "Criação de conteúdo personalizado para seu negócio e publicação automática em todas as redes sociais adaptado ao seu público.",
-                  features: ["Conteúdo adaptado ao seu setor", "Agendamento inteligente", "Templates do seu negócio"]
-                },
-                {
-                  icon: "fas fa-chart-bar",
-                  color: "green",
-                  title: "Dashboard Inteligente",
-                  description: "Painel unificado com métricas em tempo real e insights para decisões estratégicas rápidas.",
-                  features: ["Dados atualizados em tempo real", "Alertas personalizados", "Relatórios automatizados"]
-                },
-                {
-                  icon: "fas fa-mobile-alt",
-                  color: "purple",
-                  title: "Relatórios WhatsApp",
-                  description: "Receba relatórios diários com análises e sugestões de ações direto no seu WhatsApp pessoal.",
-                  features: ["Relatórios diários automáticos", "Ações sugeridas por IA", "Alertas de oportunidades"]
-                }
-              ].map((solution, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 hover:bg-${solution.color}-500/20 hover:border-${solution.color}-500/30 transition-all duration-300 group`}
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className={`w-12 h-12 bg-gradient-to-r from-${solution.color}-600 to-${solution.color}-800 rounded-xl flex items-center justify-center group-hover:animate-pulse`}>
-                      <i className={`${solution.icon} text-white text-xl`}></i>
-                    </div>
-                    <div>
-                      <h3 className={`text-xl font-bold mb-2 text-${solution.color}-400`}>{solution.title}</h3>
-                      <p className="text-gray-400">{solution.description}</p>
-                      <ul className="mt-3 space-y-1 text-sm text-gray-500">
-                        {solution.features.map((feature, featureIndex) => (
-                          <li key={featureIndex}>✓ {feature}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-            
-            <SocialStudioMockup />
-          </div>
-        </div>
-      </motion.section>
+
 
       {/* PrimeFit Case Section */}
       <motion.section 
@@ -260,8 +117,8 @@ export default function Home() {
             {[
               { icon: "fas fa-robot", color: "red", title: "Atendimento IA 24/7", description: "ChatBot inteligente responde instantaneamente no WhatsApp e redes sociais" },
               { icon: "fas fa-bolt", color: "blue", title: "Social Studio 1-Clique", description: "Criação e publicação automática de conteúdo profissional" },
-              { icon: "fas fa-chart-bar", color: "green", title: "Dashboard Inteligente", description: "Painel unificado com métricas em tempo real" },
-              { icon: "fas fa-mobile", color: "purple", title: "Relatórios WhatsApp", description: "Relatórios diários com análises e sugestões" }
+              { icon: "fas fa-chart-bar", color: "purple", title: "Dashboard Inteligente", description: "Painel unificado com métricas em tempo real" },
+              { icon: "fas fa-mobile", color: "green", title: "Relatórios WhatsApp", description: "Relatórios diários com análises e sugestões" }
             ].map((implementation, index) => (
               <motion.div
                 key={index}
@@ -386,8 +243,8 @@ export default function Home() {
               {[
                 { icon: "fas fa-headset", color: "red", title: "Suporte 24/7 com IA", description: "Implementamos chatbots inteligentes que respondem clientes instantaneamente, qualificam leads e geram vendas automaticamente." },
                 { icon: "fas fa-magic", color: "blue", title: "Sistema de Criação de Posts", description: "Nossa IA cria conteúdo profissional e publica automaticamente em todas as redes sociais com apenas um clique." },
-                { icon: "fas fa-chart-bar", color: "green", title: "Dashboard Informações Atualizadas", description: "Painel unificado mostra todas as métricas importantes em tempo real com insights para decisões rápidas." },
-                { icon: "fas fa-mobile-alt", color: "purple", title: "Relatórios direto no WhatsApp", description: "Receba relatórios diários com análises completas e sugestões de ações direto no seu WhatsApp pessoal." }
+                { icon: "fas fa-chart-bar", color: "purple", title: "Dashboard Informações Atualizadas", description: "Painel unificado mostra todas as métricas importantes em tempo real com insights para decisões rápidas." },
+                { icon: "fas fa-comment-dots", color: "green", title: "Relatórios direto no WhatsApp", description: "Receba relatórios diários com análises completas e sugestões de ações direto no seu WhatsApp pessoal." }
               ].map((step, index) => (
                 <motion.div
                   key={index}
@@ -462,6 +319,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
+        id="precos"
         className="py-20 relative"
       >
         <div className="container mx-auto px-6">
@@ -474,26 +332,26 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              {
-                icon: "fas fa-rocket",
-                color: "red",
-                title: "Setup Inicial",
-                price: "R$ 2.997",
-                description: "Implementação completa em 30 dias",
-                features: ["Chatbot WhatsApp configurado", "Social Studio implementado", "Dashboard personalizado", "Treinamento da equipe", "Suporte durante implementação"],
-                popular: false
-              },
-              {
-                icon: "fas fa-sync",
-                color: "green",
-                title: "Assinatura Mensal",
-                price: "R$ 897",
-                description: "Manutenção e evolução contínua",
-                features: ["Suporte técnico 24/7", "Atualizações automáticas", "Relatórios mensais", "Otimizações de IA", "Novas funcionalidades"],
-                popular: true
-              },
+                              {
+                  icon: "fas fa-rocket",
+                  color: "red",
+                  title: "Setup Inicial",
+                  price: "R$ 2.997",
+                  description: "Implementação completa em 30 dias (Taxa Única)",
+                  features: ["Chatbot WhatsApp configurado", "Social Studio implementado", "Dashboard personalizado", "Treinamento da equipe", "Suporte durante implementação"],
+                  popular: false
+                },
+                              {
+                  icon: "fas fa-sync",
+                  color: "green",
+                  title: "Assinatura Mensal",
+                  price: "R$ 897",
+                  description: "Manutenção e evolução contínua (Recorrente)",
+                  features: ["Suporte técnico 24/7", "Atualizações automáticas", "Relatórios mensais", "Otimizações de IA", "Novas funcionalidades"],
+                  popular: true
+                },
               {
                 icon: "fas fa-crown",
                 color: "blue",
@@ -509,27 +367,58 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-8 text-center relative ${plan.popular ? 'border-2 border-red-500 shadow-2xl shadow-red-500/20' : ''} hover:bg-${plan.color}-500/20 hover:border-${plan.color}-500/30 transition-all duration-300`}
+                className={`bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-10 text-center relative ${plan.popular ? 'border-2 border-red-500 shadow-2xl shadow-red-500/20' : ''} hover:bg-${plan.color}-500/20 hover:border-${plan.color}-500/30 transition-all duration-300`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-4 py-1 rounded-full text-sm font-bold">
                     MAIS POPULAR
                   </div>
                 )}
-                <div className={`w-16 h-16 bg-${plan.color}-600 rounded-full flex items-center justify-center mx-auto mb-6`}>
-                  <i className={`${plan.icon} text-white text-2xl`}></i>
+                <div className={`w-20 h-20 bg-${plan.color}-600 rounded-full flex items-center justify-center mx-auto mb-8`}>
+                  <i className={`${plan.icon} text-white text-3xl`}></i>
                 </div>
-                <h3 className={`text-2xl font-bold mb-4 text-${plan.color}-400`}>{plan.title}</h3>
-                <div className="text-4xl font-black text-white mb-2">{plan.price}</div>
-                <p className="text-gray-400 text-sm mb-6">{plan.description}</p>
-                <ul className="space-y-2 text-sm text-gray-400 text-left">
+                <h3 className={`text-3xl font-bold mb-6 text-${plan.color}-400`}>{plan.title}</h3>
+                <div className="text-5xl font-black text-white mb-4">{plan.price}</div>
+                <p className="text-gray-400 text-base mb-8">{plan.description}</p>
+                <ul className="space-y-3 text-base text-gray-400 text-left">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}>✓ {feature}</li>
+                    <li key={featureIndex} className="flex items-center">
+                      <span className="text-green-400 mr-2">✓</span>
+                      {feature}
+                    </li>
                   ))}
                 </ul>
               </motion.div>
             ))}
           </div>
+          
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-center mt-16"
+          >
+            <motion.button
+              className="px-16 py-6 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold rounded-2xl text-2xl transition-all duration-300 relative overflow-hidden group shadow-2xl shadow-red-500/25"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 20px 40px rgba(239, 68, 68, 0.4)"
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "100%" }}
+                transition={{ duration: 0.6 }}
+              />
+              <span className="relative z-10 flex items-center justify-center space-x-3">
+                <i className="fas fa-robot text-3xl"></i>
+                <span>Implemente IA na sua empresa</span>
+              </span>
+            </motion.button>
+          </motion.div>
         </div>
       </motion.section>
 
@@ -612,8 +501,8 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { value: 76, suffix: "%", prefix: "+", title: "Aumento em Vendas", description: "De R$ 89k para R$ 157k mensais", color: "green" },
-              { value: 65, suffix: "%", prefix: "-", title: "Redução de Custos", description: "Economia de R$ 5.200 mensais", color: "blue" },
-              { value: 98, suffix: "%", prefix: "", title: "Mais Rápido", description: "Resposta instantânea vs 4-8h", color: "purple" }
+              { value: 65, suffix: "%", prefix: "-", title: "Redução de Custos", description: "Economia de R$ 5.200 mensais", color: "green" },
+              { value: 98, suffix: "%", prefix: "", title: "Mais Rápido", description: "Resposta instantânea vs 4-8h", color: "green" }
             ].map((metric, index) => (
               <motion.div
                 key={index}
@@ -638,12 +527,14 @@ export default function Home() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="py-20 relative bg-gradient-to-r from-red-600 to-red-800 overflow-hidden"
+        className="py-16 relative bg-gradient-to-br from-red-900 via-red-800 to-red-700 overflow-hidden"
       >
         {/* Background Effects */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-xl"></div>
-          <div className="absolute bottom-10 right-10 w-48 h-48 bg-yellow-300 rounded-full blur-xl"></div>
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-900/50 to-transparent" />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-600/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-yellow-400/10 rounded-full blur-2xl" />
         </div>
         
         <div className="container mx-auto px-6 text-center relative z-10">
@@ -659,7 +550,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-2xl lg:text-3xl font-bold mb-8 text-red-100"
+            className="text-xl lg:text-2xl font-bold mb-6 text-red-100"
           >
             com IA e automação inteligente
           </motion.h3>
@@ -667,7 +558,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-red-100 mb-12 max-w-3xl mx-auto"
+            className="text-lg lg:text-xl text-red-100 mb-10 max-w-3xl mx-auto leading-relaxed"
           >
             Não fique para trás enquanto seus concorrentes automatizam e crescem. 
             Transforme sua empresa hoje mesmo com a tecnologia que já comprovou resultados.
@@ -677,15 +568,11 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            className="flex justify-center items-center mb-12"
           >
-            <Button className="bg-white text-red-600 hover:bg-gray-100 px-12 py-5 rounded-2xl font-black text-xl transition-all duration-300 hover:shadow-2xl hover:scale-105">
-              <i className="fas fa-rocket mr-3"></i>
+            <Button className="bg-white text-red-600 hover:bg-gray-100 px-16 py-6 rounded-2xl font-black text-xl transition-all duration-300 hover:shadow-2xl hover:scale-105 shadow-2xl shadow-red-900/50">
+              <i className="fas fa-rocket mr-4 text-red-600"></i>
               Implementar Agora
-            </Button>
-            <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-red-600 px-12 py-5 rounded-2xl font-bold text-xl transition-all duration-300">
-              <i className="fas fa-calendar mr-3"></i>
-              Agendar Demonstração
             </Button>
           </motion.div>
           
@@ -693,19 +580,19 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-12 grid md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+            className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl font-black text-yellow-300 mb-2">30 dias</div>
-              <p className="text-red-100">Implementação completa</p>
+              <div className="text-3xl lg:text-4xl font-black text-yellow-300 mb-2">30 dias</div>
+              <p className="text-red-100 text-base font-medium">Implementação completa</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-black text-yellow-300 mb-2">ROI 300%</div>
-              <p className="text-red-100">Retorno comprovado</p>
+              <div className="text-3xl lg:text-4xl font-black text-yellow-300 mb-2">ROI 300%</div>
+              <p className="text-red-100 text-base font-medium">Retorno comprovado</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-black text-yellow-300 mb-2">24/7</div>
-              <p className="text-red-100">Suporte garantido</p>
+              <div className="text-3xl lg:text-4xl font-black text-yellow-300 mb-2">24/7</div>
+              <p className="text-red-100 text-base font-medium">Suporte garantido</p>
             </div>
           </motion.div>
         </div>
