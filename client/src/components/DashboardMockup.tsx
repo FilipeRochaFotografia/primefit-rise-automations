@@ -11,101 +11,104 @@ export default function DashboardMockup() {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="bg-gray-900/90 backdrop-blur-lg border border-gray-700/50 rounded-3xl p-8"
+      className="bg-gray-900/95 backdrop-blur-xl border-2 border-gray-600/70 rounded-3xl p-4 md:p-8 shadow-2xl shadow-black/50"
     >
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 md:mb-8 gap-4">
         <div className="flex items-center space-x-3">
-          <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
-            <i className="fas fa-chart-line text-white text-xl"></i>
+          <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center">
+            <i className="fas fa-chart-line text-white text-lg md:text-xl"></i>
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-white">Dashboard PrimeFit</h3>
-            <p className="text-gray-400 text-sm">Últimos 30 dias</p>
+            <h3 className="text-xl md:text-2xl font-bold text-white">Dashboard PrimeFit</h3>
+            <p className="text-gray-400 text-xs md:text-sm">Últimos 30 dias</p>
           </div>
         </div>
         
         {/* Quick Actions */}
-        <div className="flex space-x-3">
+        <div className="flex flex-wrap gap-2 md:space-x-3">
           <Button 
             size="sm" 
-            className="bg-blue-600 hover:bg-blue-700 text-white rounded-xl"
+            className="bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs md:text-sm px-3 py-2"
             onClick={() => setActiveSection("social")}
           >
-            <i className="fas fa-magic mr-2"></i>
-            Social Studio
+            <i className="fas fa-magic mr-1 md:mr-2"></i>
+            <span className="hidden sm:inline">Social Studio</span>
+            <span className="sm:hidden">Social</span>
           </Button>
           <Button 
             size="sm" 
-            className="bg-green-600 hover:bg-green-700 text-white rounded-xl"
+            className="bg-green-600 hover:bg-green-700 text-white rounded-xl text-xs md:text-sm px-3 py-2"
             onClick={() => setActiveSection("reports")}
           >
-            <i className="fas fa-file-alt mr-2"></i>
-            Relatórios
+            <i className="fas fa-file-alt mr-1 md:mr-2"></i>
+            <span className="hidden sm:inline">Relatórios</span>
+            <span className="sm:hidden">Relatórios</span>
           </Button>
           <Button 
             size="sm" 
-            className="bg-purple-600 hover:bg-purple-700 text-white rounded-xl"
+            className="bg-purple-600 hover:bg-purple-700 text-white rounded-xl text-xs md:text-sm px-3 py-2"
             onClick={() => setActiveSection("chatbot")}
           >
-            <i className="fas fa-robot mr-2"></i>
-            Chatbot
+            <i className="fas fa-robot mr-1 md:mr-2"></i>
+            <span className="hidden sm:inline">Chatbot</span>
+            <span className="sm:hidden">Bot</span>
           </Button>
         </div>
       </div>
       
       {/* Metrics Grid */}
-      <div className="grid md:grid-cols-4 gap-6 mb-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-6 md:mb-8">
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-gradient-to-br from-green-900/60 to-green-700/60 border border-green-500/30 rounded-2xl p-6 text-center hover:border-green-400/50 transition-all duration-300"
+          className="bg-gradient-to-br from-green-900/80 to-green-700/80 border-2 border-green-500/50 rounded-2xl p-4 md:p-6 text-center hover:border-green-400/70 hover:scale-105 transition-all duration-300 shadow-lg shadow-green-500/20"
         >
-          <div className="text-4xl font-black text-green-400 mb-2">
+          <div className="text-2xl md:text-4xl font-black text-green-400 mb-1 md:mb-2">
             <AnimatedCounter end={47} suffix="%" />
           </div>
-          <div className="text-sm font-semibold text-gray-300">Vendas Online</div>
-          <div className="text-xs text-green-400 mt-2 font-medium">↗ R$ 156.8k este mês</div>
+          <div className="text-xs md:text-sm font-semibold text-gray-300">Vendas Online</div>
+          <div className="text-xs text-green-400 mt-1 md:mt-2 font-medium">↗ R$ 156.8k este mês</div>
         </motion.div>
         
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-gradient-to-br from-blue-900/60 to-blue-700/60 border border-blue-500/30 rounded-2xl p-6 text-center hover:border-blue-400/50 transition-all duration-300"
+          className="bg-gradient-to-br from-blue-900/80 to-blue-700/80 border-2 border-blue-500/50 rounded-2xl p-4 md:p-6 text-center hover:border-blue-400/70 hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-500/20"
         >
-          <div className="text-4xl font-black text-blue-400 mb-2">
+          <div className="text-2xl md:text-4xl font-black text-blue-400 mb-1 md:mb-2">
             <AnimatedCounter end={20} suffix="s" />
           </div>
-          <div className="text-sm font-semibold text-gray-300">Tempo Resposta</div>
-          <div className="text-xs text-blue-400 mt-2 font-medium">↓ IA treinada para negócio</div>
+          <div className="text-xs md:text-sm font-semibold text-gray-300">Tempo Resposta</div>
+          <div className="text-xs text-blue-400 mt-1 md:mt-2 font-medium">↓ IA treinada para negócio</div>
         </motion.div>
         
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="bg-gradient-to-br from-purple-900/60 to-purple-700/60 border border-purple-500/30 rounded-2xl p-6 text-center hover:border-purple-400/50 transition-all duration-300"
+          className="bg-gradient-to-br from-purple-900/80 to-purple-700/80 border-2 border-purple-500/50 rounded-2xl p-4 md:p-6 text-center hover:border-purple-400/70 hover:scale-105 transition-all duration-300 shadow-lg shadow-purple-500/20"
         >
-          <div className="text-4xl font-black text-purple-400 mb-2">
+          <div className="text-2xl md:text-4xl font-black text-purple-400 mb-1 md:mb-2">
             <AnimatedCounter end={89} suffix="%" />
           </div>
-          <div className="text-sm font-semibold text-gray-300">Taxa Conversão</div>
-          <div className="text-xs text-purple-400 mt-2 font-medium">↗ +34% vs manual</div>
+          <div className="text-xs md:text-sm font-semibold text-gray-300">Taxa Conversão</div>
+          <div className="text-xs text-purple-400 mt-1 md:mt-2 font-medium">↗ +34% vs manual</div>
         </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="bg-gradient-to-br from-red-900/60 to-red-700/60 border border-red-500/30 rounded-2xl p-6 text-center hover:border-red-400/50 transition-all duration-300"
+          className="bg-gradient-to-br from-red-900/80 to-red-700/80 border-2 border-red-500/50 rounded-2xl p-4 md:p-6 text-center hover:border-red-400/70 hover:scale-105 transition-all duration-300 shadow-lg shadow-red-500/20"
         >
-          <div className="text-4xl font-black text-red-400 mb-2">
+          <div className="text-2xl md:text-4xl font-black text-red-400 mb-1 md:mb-2">
             <AnimatedCounter end={1847} suffix="" />
           </div>
-          <div className="text-sm font-semibold text-gray-300">Mensagens/dia</div>
-          <div className="text-xs text-red-400 mt-2 font-medium">↗ +284% automático</div>
+          <div className="text-xs md:text-sm font-semibold text-gray-300">Mensagens/dia</div>
+          <div className="text-xs text-red-400 mt-1 md:mt-2 font-medium">↗ +284% automático</div>
         </motion.div>
       </div>
       
@@ -115,7 +118,7 @@ export default function DashboardMockup() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-gray-800/60 border border-gray-600/50 rounded-2xl p-6"
+          className="bg-gray-800/80 border-2 border-gray-600/70 rounded-2xl p-4 md:p-6 shadow-lg shadow-gray-900/50"
         >
           <div className="flex justify-between items-center mb-6">
             <h4 className="text-lg font-bold text-white">Mensagens Processadas - Últimos 7 dias</h4>
@@ -149,7 +152,7 @@ export default function DashboardMockup() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-gray-800/60 border border-gray-600/50 rounded-2xl p-6"
+          className="bg-gray-800/80 border-2 border-gray-600/70 rounded-2xl p-4 md:p-6 shadow-lg shadow-gray-900/50"
         >
           <div className="flex items-center mb-6">
             <i className="fas fa-magic text-blue-400 text-xl mr-3"></i>
@@ -192,7 +195,7 @@ export default function DashboardMockup() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-gray-800/60 border border-gray-600/50 rounded-2xl p-6"
+          className="bg-gray-800/80 border-2 border-gray-600/70 rounded-2xl p-4 md:p-6 shadow-lg shadow-gray-900/50"
         >
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center">
@@ -226,7 +229,7 @@ export default function DashboardMockup() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-gray-800/60 border border-gray-600/50 rounded-2xl p-6"
+          className="bg-gray-800/80 border-2 border-gray-600/70 rounded-2xl p-4 md:p-6 shadow-lg shadow-gray-900/50"
         >
           <div className="flex items-center mb-6">
             <i className="fas fa-robot text-purple-400 text-xl mr-3"></i>

@@ -5,8 +5,6 @@ import SocialStudioMockup from "@/components/SocialStudioMockup";
 import DashboardMockup from "@/components/DashboardMockup";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import HeroSection3D from "@/components/sections/HeroSection3D";
-import FeaturesSection from "@/components/sections/FeaturesSection";
-import ToolsSection from "@/components/sections/ToolsSection";
 import InteractiveButton from "@/components/ui/InteractiveButton";
 import { ProblemCardsGrid } from "@/components/interactive/ProblemCard3D";
 
@@ -33,9 +31,7 @@ export default function Home() {
               <span className="text-white">TRUE</span><span className="text-red-500">RISE</span>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <button onClick={() => scrollToSection('solucao')} className="hover:text-red-400 transition-colors">Solução</button>
               <button onClick={() => scrollToSection('case')} className="hover:text-red-400 transition-colors">Case</button>
-              <button onClick={() => scrollToSection('como-funciona')} className="hover:text-red-400 transition-colors">Como Funciona</button>
               <button onClick={() => scrollToSection('resultados')} className="hover:text-red-400 transition-colors">Resultados</button>
             </nav>
             <Button 
@@ -51,11 +47,7 @@ export default function Home() {
       {/* Hero Section 3D */}
       <HeroSection3D />
 
-      {/* Features Section */}
-      <FeaturesSection />
 
-      {/* Tools Section */}
-      <ToolsSection />
 
       {/* Problem Section */}
       <motion.section 
@@ -216,103 +208,9 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* How It Works Section */}
-      <motion.section 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        id="como-funciona" 
-        className="py-20 relative"
-      >
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black mb-6">
-              Como <span className="text-red-500 glow-text">Funciona</span>
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              4 passos simples para transformar sua empresa com automação inteligente
-            </p>
-          </div>
-          
-          <div className="relative">
-            {/* Connection Line */}
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-red-500 via-blue-500 to-green-500 transform -translate-y-1/2"></div>
-            
-            {/* Steps */}
-            <div className="grid lg:grid-cols-4 gap-8">
-              {[
-                { icon: "fas fa-headset", color: "red", title: "Suporte 24/7 com IA", description: "Implementamos chatbots inteligentes que respondem clientes instantaneamente, qualificam leads e geram vendas automaticamente." },
-                { icon: "fas fa-magic", color: "blue", title: "Sistema de Criação de Posts", description: "Nossa IA cria conteúdo profissional e publica automaticamente em todas as redes sociais com apenas um clique." },
-                { icon: "fas fa-chart-bar", color: "purple", title: "Dashboard Informações Atualizadas", description: "Painel unificado mostra todas as métricas importantes em tempo real com insights para decisões rápidas." },
-                { icon: "fas fa-comment-dots", color: "green", title: "Relatórios direto no WhatsApp", description: "Receba relatórios diários com análises completas e sugestões de ações direto no seu WhatsApp pessoal." }
-              ].map((step, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  className="relative text-center group"
-                >
-                  <div className={`w-20 h-20 bg-gradient-to-br from-${step.color}-600 to-${step.color}-800 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
-                    <i className={`${step.icon} text-white text-2xl`}></i>
-                  </div>
-                  <div className={`glass-effect rounded-2xl p-6 group-hover:bg-${step.color}-500/10 transition-all duration-300`}>
-                    <h3 className={`text-xl font-bold mb-3 text-${step.color}-400`}>{step.title}</h3>
-                    <p className="text-gray-400 text-sm">{step.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </motion.section>
 
-      {/* Market Potential Section */}
-      <motion.section 
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="py-20 relative bg-gradient-to-b from-black to-gray-900"
-      >
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black mb-6">
-              Potencial de <span className="text-red-500">Mercado</span>
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              O mercado de automação e IA está explodindo - posicione sua empresa na vanguarda
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { value: "$394B", title: "Mercado Global IA", description: "Crescimento de 37.3% ao ano até 2030", progress: 75, color: "red" },
-              { value: "R$42B", title: "Mercado Brasil", description: "Automação para PMEs em crescimento acelerado", progress: 65, color: "blue" },
-              { value: "17M", title: "PMEs no Brasil", description: "Empresas necessitando automação inteligente", progress: 80, color: "green" }
-            ].map((market, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="glass-effect rounded-2xl p-8 text-center"
-              >
-                <div className={`text-4xl font-black text-${market.color}-400 mb-4 animate-counter`}>{market.value}</div>
-                <h3 className="text-xl font-bold mb-3">{market.title}</h3>
-                <p className="text-gray-400 text-sm">{market.description}</p>
-                <div className={`mt-4 bg-${market.color}-500/20 rounded-full h-2`}>
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${market.progress}%` }}
-                    transition={{ duration: 1.5, delay: 0.5 }}
-                    className={`bg-${market.color}-500 h-2 rounded-full`}
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
+
+
 
       {/* Pricing Section */}
       <motion.section 

@@ -66,6 +66,8 @@ export default {
         sans: ["var(--font-sans)"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
+        outfit: ["var(--font-outfit)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {

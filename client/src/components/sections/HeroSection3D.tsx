@@ -123,22 +123,7 @@ export default function HeroSection3D() {
           <div className="w-full h-full bg-gradient-to-br from-red-500/30 via-purple-600/20 to-blue-500/30 rounded-full blur-3xl animate-pulse" />
         </motion.div>
 
-        <motion.div
-          className="floating-orb absolute bottom-20 right-20 w-96 h-96"
-          animate={{
-            y: [0, 20, 0],
-            rotate: [0, -360],
-            scale: [1, 0.9, 1]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2
-          }}
-        >
-          <div className="w-full h-full bg-gradient-to-br from-blue-500/30 via-green-600/20 to-yellow-500/30 rounded-full blur-3xl animate-pulse" />
-        </motion.div>
+
 
         <motion.div
           className="floating-orb absolute top-1/2 left-1/2 w-64 h-64"
@@ -181,36 +166,7 @@ export default function HeroSection3D() {
           ))}
         </div>
 
-        {/* Holographic Lines */}
-        <div className="absolute inset-0">
-          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <motion.path
-              d="M0,50 Q25,25 50,50 T100,50"
-              stroke="url(#holographic-gradient)"
-              strokeWidth="0.1"
-              fill="none"
-              animate={{
-                d: [
-                  "M0,50 Q25,25 50,50 T100,50",
-                  "M0,50 Q25,75 50,50 T100,50",
-                  "M0,50 Q25,25 50,50 T100,50"
-                ]
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-            <defs>
-              <linearGradient id="holographic-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="rgba(239, 68, 68, 0)" />
-                <stop offset="50%" stopColor="rgba(239, 68, 68, 0.8)" />
-                <stop offset="100%" stopColor="rgba(239, 68, 68, 0)" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
+
       </div>
 
       {/* Content */}
@@ -223,38 +179,22 @@ export default function HeroSection3D() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <motion.div
-              className="inline-block mb-4"
-              animate={{
-                textShadow: [
-                  "0 0 20px rgba(239, 68, 68, 0.5)",
-                  "0 0 40px rgba(239, 68, 68, 0.8)",
-                  "0 0 20px rgba(239, 68, 68, 0.5)"
-                ]
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
-              <h1 className="text-6xl lg:text-8xl font-black mb-6">
-                <span className="text-white">TRUE RISE</span>
-                <br />
-                <span className="text-red-500 font-bold">
-                  COMPANY
-                </span>
-              </h1>
-            </motion.div>
+            <h1 className="text-6xl lg:text-8xl font-black mb-8 tracking-tight font-outfit leading-none">
+              <span className="text-white font-extrabold">TRUE RISE</span>
+              <br />
+              <span className="text-red-500 font-extrabold">
+                COMPANY
+              </span>
+            </h1>
 
             <motion.p 
-              className="text-2xl lg:text-3xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0"
+              className="text-2xl lg:text-3xl text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 font-medium font-outfit"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Otimizando o trabalho manual com{" "}
-              <span className="text-red-400 font-bold">IA</span>
+              <span className="text-red-500 font-bold">IA</span>
             </motion.p>
 
             <motion.div
@@ -326,7 +266,7 @@ export default function HeroSection3D() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             style={{
-              transform: `perspective(1000px) rotateY(${mousePosition.x * 5}deg) rotateX(${mousePosition.y * -5}deg)`
+              transform: `perspective(1000px) rotateY(${mousePosition.x * 3}deg) rotateX(${mousePosition.y * -3}deg)`
             }}
           >
             <div className="relative">
