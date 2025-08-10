@@ -3,7 +3,7 @@
 ## 📊 Status Geral: ✅ CONCLUÍDO - Fase 1 (Atualizado)
 
 ### 🎯 Objetivo Alcançado
-Landing page moderna e dinâmica com todas as funcionalidades solicitadas implementadas e funcionando perfeitamente. **Última atualização**: Dashboard Personalizado e melhorias visuais implementados.
+Landing page moderna e dinâmica com todas as funcionalidades solicitadas implementadas e funcionando perfeitamente. **Última atualização**: Carrossel de resultados otimizado para mobile e simplificado.
 
 ## ✅ Implementações Concluídas
 
@@ -72,11 +72,13 @@ Landing page moderna e dinâmica com todas as funcionalidades solicitadas implem
 
 #### **Carrossel Antes/Depois** ✅ NOVO
 - [x] Seção de comparação transformada em carrossel
-- [x] 3 cards: Antes da Automação, Depois da Automação, Resumo da Transformação
+- [x] 2 cards: Antes da Automação, Depois da Automação
 - [x] Scroll horizontal suave com scrollbar oculta
 - [x] Indicador visual "Deslize para ver a comparação completa" com animação
-- [x] Pontos de navegação interativos (3 pontos)
-- [x] Cards com largura fixa (400px) para consistência visual
+- [x] Pontos de navegação interativos (2 pontos)
+- [x] Cards responsivos: 300px no mobile, 400px no desktop
+- [x] Padding otimizado: p-6 no mobile, p-8 no desktop
+- [x] Espaçamento adaptativo: gap-4 no mobile, gap-8 no desktop
 
 #### **Dashboard Personalizado** ✅ NOVO
 - [x] Título "Dashboard Personalizado" adicionado antes do componente

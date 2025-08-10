@@ -1,7 +1,7 @@
 # Resumo de Execução - DarkSpark
 
 ## 🎯 Objetivo Alcançado
-Transformação completa da landing page do DarkSpark em uma experiência moderna, dinâmica e altamente interativa, com todas as funcionalidades solicitadas implementadas com sucesso. **Última atualização**: Dashboard Personalizado e melhorias visuais implementados.
+Transformação completa da landing page do DarkSpark em uma experiência moderna, dinâmica e altamente interativa, com todas as funcionalidades solicitadas implementadas com sucesso. **Última atualização**: Carrossel de resultados otimizado para mobile e simplificado.
 
 ## 📋 Solicitações do Usuário e Status
 
@@ -78,6 +78,8 @@ Transformação completa da landing page do DarkSpark em uma experiência modern
 
 #### **11. Carrossel Antes/Depois** (NOVO)
 - [x] **"Essa parte deve ser um carrossel tambem"** - Seção de comparação transformada em carrossel
+- [x] **"os cards em resultados esperados devem ser mais finos para mobile"** - Cards otimizados para mobile
+- [x] **"delete esse card azul de resumo da transformação"** - Card azul removido
 
 #### **12. Dashboard Personalizado** (NOVO)
 - [x] **"antes do Dashboard escreva algo como Dashboard Personalizado"** - Título adicionado
@@ -137,11 +139,13 @@ Transformação completa da landing page do DarkSpark em uma experiência modern
 
 #### **Carrossel Antes/Depois** (NOVO)
 - ✅ Seção de comparação transformada em carrossel
-- ✅ 3 cards: Antes da Automação, Depois da Automação, Resumo da Transformação
+- ✅ 2 cards: Antes da Automação, Depois da Automação
 - ✅ Scroll horizontal suave com scrollbar oculta
 - ✅ Indicador visual "Deslize para ver a comparação completa" com animação
-- ✅ Pontos de navegação interativos (3 pontos)
-- ✅ Cards com largura fixa (400px) para consistência visual
+- ✅ Pontos de navegação interativos (2 pontos)
+- ✅ Cards responsivos: 300px no mobile, 400px no desktop
+- ✅ Padding otimizado: p-6 no mobile, p-8 no desktop
+- ✅ Espaçamento adaptativo: gap-4 no mobile, gap-8 no desktop
 
 #### **Dashboard Personalizado** (NOVO)
 - ✅ Título "Dashboard Personalizado" adicionado antes do componente
