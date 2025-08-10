@@ -259,9 +259,9 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {[
               { icon: "fas fa-robot", color: "red", title: "Atendimento IA 24/7", description: "ChatBot inteligente responde instantaneamente no WhatsApp e redes sociais" },
-              { icon: "fas fa-lightning-bolt", color: "blue", title: "Social Studio 1-Clique", description: "Criação e publicação automática de conteúdo profissional" },
-              { icon: "fas fa-chart-line", color: "green", title: "Dashboard Inteligente", description: "Painel unificado com métricas em tempo real" },
-              { icon: "fas fa-mobile-alt", color: "purple", title: "Relatórios WhatsApp", description: "Relatórios diários com análises e sugestões" }
+              { icon: "fas fa-bolt", color: "blue", title: "Social Studio 1-Clique", description: "Criação e publicação automática de conteúdo profissional" },
+              { icon: "fas fa-chart-bar", color: "green", title: "Dashboard Inteligente", description: "Painel unificado com métricas em tempo real" },
+              { icon: "fas fa-mobile", color: "purple", title: "Relatórios WhatsApp", description: "Relatórios diários com análises e sugestões" }
             ].map((implementation, index) => (
               <motion.div
                 key={index}
