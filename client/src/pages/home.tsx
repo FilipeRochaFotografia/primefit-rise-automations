@@ -130,13 +130,13 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group"
+                className="bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 hover:bg-gray-800/80 hover:border-gray-600/50 transition-all duration-300 group"
               >
-                <div className={`w-12 h-12 bg-${problem.color}-600 rounded-full flex items-center justify-center mb-4 group-hover:animate-pulse`}>
-                  <i className={`${problem.icon} text-white text-xl`}></i>
+                <div className={`w-16 h-16 bg-gradient-to-br from-${problem.color}-500 to-${problem.color}-700 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <i className={`${problem.icon} text-white text-2xl`}></i>
                 </div>
                 <h3 className={`text-xl font-bold mb-3 text-${problem.color}-400`}>{problem.title}</h3>
-                <p className="text-gray-400 text-sm">{problem.description}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">{problem.description}</p>
               </motion.div>
             ))}
           </div>
@@ -199,7 +199,7 @@ export default function Home() {
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`glass-effect rounded-2xl p-6 hover:bg-${solution.color}-500/10 transition-all duration-300 group`}
+                  className={`bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 hover:bg-${solution.color}-500/20 hover:border-${solution.color}-500/30 transition-all duration-300 group`}
                 >
                   <div className="flex items-start space-x-4">
                     <div className={`w-12 h-12 bg-gradient-to-r from-${solution.color}-600 to-${solution.color}-800 rounded-xl flex items-center justify-center group-hover:animate-pulse`}>
@@ -268,7 +268,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`glass-effect rounded-2xl p-6 text-center group hover:bg-${implementation.color}-500/10 transition-all duration-300`}
+                className={`bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 text-center group hover:bg-${implementation.color}-500/20 hover:border-${implementation.color}-500/30 transition-all duration-300`}
               >
                 <div className={`w-16 h-16 bg-${implementation.color}-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-pulse`}>
                   <i className={`${implementation.icon} text-white text-2xl`}></i>
@@ -434,7 +434,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`glass-effect rounded-2xl p-8 text-center relative ${plan.popular ? 'border-2 border-red-500' : ''} hover:bg-${plan.color}-500/10 transition-all duration-300`}
+                className={`bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-8 text-center relative ${plan.popular ? 'border-2 border-red-500 shadow-2xl shadow-red-500/20' : ''} hover:bg-${plan.color}-500/20 hover:border-${plan.color}-500/30 transition-all duration-300`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-4 py-1 rounded-full text-sm font-bold">
@@ -483,7 +483,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="glass-effect rounded-2xl p-8"
+              className="bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-8"
             >
               <h3 className="text-2xl font-bold mb-6 text-red-400 text-center">
                 <i className="fas fa-times-circle mr-2"></i>
@@ -510,7 +510,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
-              className="glass-effect rounded-2xl p-8 border border-green-500/30"
+              className="bg-gray-900/80 backdrop-blur-md border border-green-500/50 rounded-2xl p-8"
             >
               <h3 className="text-2xl font-bold mb-6 text-green-400 text-center">
                 <i className="fas fa-check-circle mr-2"></i>
