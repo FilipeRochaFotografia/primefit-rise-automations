@@ -76,10 +76,10 @@ export default function DashboardMockup() {
           className="bg-gradient-to-br from-blue-900/60 to-blue-700/60 border border-blue-500/30 rounded-2xl p-6 text-center hover:border-blue-400/50 transition-all duration-300"
         >
           <div className="text-4xl font-black text-blue-400 mb-2">
-            <AnimatedCounter end={2.1} suffix="s" />
+            <AnimatedCounter end={20} suffix="s" />
           </div>
           <div className="text-sm font-semibold text-gray-300">Tempo Resposta</div>
-          <div className="text-xs text-blue-400 mt-2 font-medium">↓ 98% mais rápido</div>
+          <div className="text-xs text-blue-400 mt-2 font-medium">↓ IA treinada para negócio</div>
         </motion.div>
         
         <motion.div 
@@ -240,7 +240,7 @@ export default function DashboardMockup() {
               </div>
               <div className="bg-gray-700/50 rounded-xl p-4">
                 <div className="text-sm text-gray-300 mb-2">Tempo médio de resposta</div>
-                <div className="text-2xl font-bold text-blue-400">2.1s</div>
+                <div className="text-2xl font-bold text-blue-400">20s</div>
               </div>
               <div className="bg-gray-700/50 rounded-xl p-4">
                 <div className="text-sm text-gray-300 mb-2">Satisfação do cliente</div>

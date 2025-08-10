@@ -62,7 +62,7 @@ export default function Home() {
               Eliminando o trabalho manual com <span className="text-red-400">IA</span>
             </h2>
             <p className="text-xl text-gray-400 leading-relaxed max-w-2xl">
-              Transformando a <strong className="text-white">Primefit Suplementos</strong> em um case de sucesso replicável e escalável para empresas de todos os setores.
+              Transformando a <strong className="text-white">Primefit Suplementos</strong> em um case de sucesso <strong className="text-red-400">replicável para qualquer negócio</strong>. IA personalizada e adaptável para seu setor.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/30 animate-glow">
@@ -157,7 +157,7 @@ export default function Home() {
               Nossa <span className="text-red-500 glow-text">Solução</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Automação inteligente que transforma sua empresa em uma máquina de vendas
+              Automação inteligente <strong className="text-white">personalizável para qualquer setor</strong> - e-commerce, serviços, consultorias, clínicas e muito mais
             </p>
           </div>
           
@@ -169,15 +169,15 @@ export default function Home() {
                   icon: "fas fa-comments",
                   color: "red",
                   title: "Atendimento IA 24/7",
-                  description: "ChatBot inteligente responde instantaneamente no WhatsApp e redes sociais, convertendo visitantes em vendas automaticamente.",
-                  features: ["Respostas em menos de 3 segundos", "Integração WhatsApp Business API", "Processamento de linguagem natural"]
+                  description: "IA treinada especificamente para seu negócio responde em 20 segundos no WhatsApp e redes sociais, convertendo visitantes em vendas.",
+                  features: ["IA personalizada para seu setor", "Integração WhatsApp Business API", "Treinamento com seus produtos/serviços"]
                 },
                 {
                   icon: "fas fa-bolt",
                   color: "blue",
                   title: "Social Studio 1-Clique",
-                  description: "Criação e publicação automática de conteúdo profissional em todas as redes sociais com apenas um comando.",
-                  features: ["Posts criados em 30 segundos", "Agendamento inteligente", "Templates personalizados"]
+                  description: "Criação de conteúdo personalizado para seu negócio e publicação automática em todas as redes sociais adaptado ao seu público.",
+                  features: ["Conteúdo adaptado ao seu setor", "Agendamento inteligente", "Templates do seu negócio"]
                 },
                 {
                   icon: "fas fa-chart-bar",
@@ -238,7 +238,7 @@ export default function Home() {
               Case <span className="text-red-500">PrimeFit Suplementos</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              De atendimento manual para automação completa em 30 dias
+              De atendimento manual para automação completa em 30 dias - <strong className="text-white">aplicável a qualquer setor</strong>
             </p>
           </div>
           
@@ -281,6 +281,81 @@ export default function Home() {
           </div>
           
           <DashboardMockup />
+        </div>
+      </motion.section>
+
+      {/* Aplicável para Qualquer Negócio Section */}
+      <motion.section 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="py-20 relative bg-gradient-to-r from-red-900/20 to-purple-900/20"
+      >
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-black mb-6">
+              <span className="text-red-500">Qualquer Negócio</span>, Qualquer Setor
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Nossa IA é <strong className="text-white">treinada especificamente para sua empresa</strong>, adaptando-se perfeitamente ao seu ramo de atuação
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {[
+              { icon: "fas fa-store", title: "E-commerce", desc: "Suplementos, roupas, eletrônicos" },
+              { icon: "fas fa-user-md", title: "Clínicas", desc: "Médicas, estéticas, odontológicas" },
+              { icon: "fas fa-graduation-cap", title: "Educação", desc: "Cursos, consultorias, coaching" },
+              { icon: "fas fa-home", title: "Imobiliárias", desc: "Vendas, locações, administração" },
+              { icon: "fas fa-car", title: "Serviços", desc: "Oficinas, salões, restaurantes" }
+            ].map((sector, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 text-center hover:bg-red-500/10 hover:border-red-500/30 transition-all duration-300 group"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <i className={`${sector.icon} text-white text-2xl`}></i>
+                </div>
+                <h3 className="text-lg font-bold text-red-400 mb-2">{sector.title}</h3>
+                <p className="text-sm text-gray-400">{sector.desc}</p>
+                <div className="mt-3 text-xs text-green-400 font-medium">✓ IA Personalizada</div>
+              </motion.div>
+            ))}
+          </div>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-center mt-12"
+          >
+            <div className="bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-8 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                🧠 IA Treinada Especificamente para Seu Negócio
+              </h3>
+              <p className="text-gray-300 leading-relaxed">
+                Nossa inteligência artificial não é genérica. Ela aprende sobre <strong className="text-red-400">seus produtos, serviços, linguagem e clientes</strong>. 
+                O resultado? Respostas precisas, vendas qualificadas e atendimento que parece humano, mas com eficiência de máquina.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-red-400 mb-1">20s</div>
+                  <div className="text-sm text-gray-400">Resposta personalizada</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-400 mb-1">100%</div>
+                  <div className="text-sm text-gray-400">Adaptada ao seu setor</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400 mb-1">24/7</div>
+                  <div className="text-sm text-gray-400">Sempre aprendendo</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </motion.section>
 
@@ -425,7 +500,7 @@ export default function Home() {
                 title: "Serviços Premium",
                 price: "Sob consulta",
                 description: "Desenvolvimento personalizado",
-                features: ["Integrações customizadas", "IA treinada para seu negócio", "Consultoria estratégica", "Automações específicas", "Suporte dedicado"],
+                features: ["Integrações customizadas", "IA treinada especificamente", "Consultoria para seu setor", "Automações sob medida", "Suporte dedicado"],
                 popular: false
               }
             ].map((plan, index) => (
@@ -518,7 +593,7 @@ export default function Home() {
               </h3>
               <div className="space-y-4">
                 {[
-                  { label: "Tempo de Resposta", value: "2.1 segundos", color: "green" },
+                  { label: "Tempo de Resposta", value: "20 segundos", color: "green" },
                   { label: "Taxa de Conversão", value: "47%", color: "green" },
                   { label: "Posts por Semana", value: "15-20", color: "green" },
                   { label: "Custo Operacional", value: "R$ 2.800/mês", color: "green" },
