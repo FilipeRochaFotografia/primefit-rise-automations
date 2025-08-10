@@ -21,7 +21,7 @@ export default function ProblemCard3D({
 
   return (
     <motion.div
-      className={`relative w-full h-80 perspective-1000 ${className}`}
+      className={`relative w-full h-64 perspective-1000 ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => setIsFlipped(!isFlipped)}
@@ -38,23 +38,23 @@ export default function ProblemCard3D({
       >
         {/* Front Side - Problem */}
         <motion.div
-          className="absolute inset-0 backface-hidden glass-primary rounded-3xl p-8 flex flex-col justify-between"
+          className="absolute inset-0 backface-hidden glass-primary rounded-3xl p-6 flex flex-col justify-between"
         >
           {/* Header */}
           <div className="text-center">
             <motion.div
-              className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-red-500/20 to-red-600/20 flex items-center justify-center"
+              className="w-14 h-14 mx-auto mb-3 rounded-2xl bg-gradient-to-br from-red-500/20 to-red-600/20 flex items-center justify-center"
               animate={{
                 scale: isHovered ? 1.1 : 1,
                 rotate: isHovered ? 5 : 0
               }}
               transition={{ duration: 0.3 }}
             >
-              <i className={`${icon} text-2xl text-red-400`}></i>
+              <i className={`${icon} text-xl text-red-400`}></i>
             </motion.div>
             
             <motion.h3
-              className="text-xl font-bold text-white mb-4"
+              className="text-lg font-bold text-white mb-3"
               animate={{
                 textShadow: isHovered 
                   ? "0 0 20px rgba(239, 68, 68, 0.5)" 
@@ -67,7 +67,7 @@ export default function ProblemCard3D({
 
           {/* Content */}
           <motion.p
-            className="text-gray-300 text-center leading-relaxed"
+            className="text-gray-300 text-center leading-relaxed text-sm"
             animate={{
               opacity: isHovered ? 1 : 0.8
             }}
@@ -83,7 +83,7 @@ export default function ProblemCard3D({
             }}
           >
             <motion.div
-              className="inline-flex items-center text-red-400 text-sm font-medium"
+              className="inline-flex items-center text-red-400 text-xs font-medium"
               animate={{
                 scale: isHovered ? 1.05 : 1
               }}
@@ -140,13 +140,13 @@ export default function ProblemCard3D({
         {/* Back Side - Solution */}
         {solution && (
           <motion.div
-            className="absolute inset-0 backface-hidden glass-secondary rounded-3xl p-8 flex flex-col justify-center items-center text-center"
+            className="absolute inset-0 backface-hidden glass-secondary rounded-3xl p-6 flex flex-col justify-center items-center text-center"
             style={{ 
               transform: "rotateY(180deg)"
             }}
           >
             <motion.div
-              className="w-16 h-16 mb-6 rounded-2xl bg-gradient-to-br from-green-500/20 to-green-600/20 flex items-center justify-center"
+              className="w-14 h-14 mb-4 rounded-2xl bg-gradient-to-br from-green-500/20 to-green-600/20 flex items-center justify-center"
               animate={{
                 scale: [1, 1.1, 1],
                 rotate: [0, 360]
@@ -157,19 +157,19 @@ export default function ProblemCard3D({
                 ease: "linear"
               }}
             >
-              <i className="fas fa-check text-2xl text-green-400"></i>
+              <i className="fas fa-check text-xl text-green-400"></i>
             </motion.div>
 
-            <h4 className="text-xl font-bold text-white mb-4">
+            <h4 className="text-lg font-bold text-white mb-3">
               Solução
             </h4>
 
-            <p className="text-gray-300 leading-relaxed mb-6">
+            <p className="text-gray-300 leading-relaxed mb-4 text-sm">
               {solution}
             </p>
 
             <motion.div
-              className="inline-flex items-center text-green-400 text-sm font-medium"
+              className="inline-flex items-center text-green-400 text-xs font-medium"
               animate={{
                 scale: [1, 1.05, 1]
               }}
@@ -256,7 +256,7 @@ export function ProblemCardsGrid() {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {problems.map((problem, index) => (
         <motion.div
           key={index}

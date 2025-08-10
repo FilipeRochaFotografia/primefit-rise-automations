@@ -74,7 +74,7 @@ export default function Home() {
           </motion.div>
           
           {/* Implementation Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
             {[
               { icon: "fas fa-robot", color: "red", title: "Atendimento IA 24/7", description: "ChatBot inteligente responde instantaneamente no WhatsApp e redes sociais" },
               { icon: "fas fa-bolt", color: "blue", title: "Social Studio 1-Clique", description: "Criação e publicação automática de conteúdo profissional" },
@@ -86,14 +86,14 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 text-center group hover:bg-${implementation.color}-500/20 hover:border-${implementation.color}-500/30 transition-all duration-300`}
+                className={`bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-4 text-center group hover:bg-${implementation.color}-500/20 hover:border-${implementation.color}-500/30 transition-all duration-300`}
               >
-                <div className={`w-16 h-16 bg-${implementation.color}-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-pulse`}>
-                  <i className={`${implementation.icon} text-white text-2xl`}></i>
+                <div className={`w-12 h-12 bg-${implementation.color}-600 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:animate-pulse`}>
+                  <i className={`${implementation.icon} text-white text-lg`}></i>
                 </div>
-                <h3 className={`text-lg font-bold mb-2 text-${implementation.color}-400`}>{implementation.title}</h3>
-                <p className="text-sm text-gray-400">{implementation.description}</p>
-                <div className="mt-3 text-xs text-green-400">✓ Implementado</div>
+                <h3 className={`text-base font-bold mb-2 text-${implementation.color}-400`}>{implementation.title}</h3>
+                <p className="text-xs text-gray-400">{implementation.description}</p>
+                <div className="mt-2 text-xs text-green-400">✓ Implementado</div>
               </motion.div>
             ))}
           </div>
@@ -193,28 +193,37 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-center mt-12"
+            className="text-center mt-10"
           >
-            <div className="bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-8 max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                🧠 IA Treinada Especificamente para Seu Negócio
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                Nossa inteligência artificial não é genérica. Ela aprende sobre <strong className="text-red-400">seus produtos, serviços, linguagem e clientes</strong>. 
-                O resultado? Respostas precisas, vendas qualificadas e atendimento que parece humano, mas com eficiência de máquina.
+            <div className="bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 max-w-3xl mx-auto">
+              <div className="flex items-center justify-center mb-5">
+                <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mr-5 shadow-lg shadow-pink-500/20">
+                  <i className="fas fa-brain text-white text-2xl"></i>
+                </div>
+                <div className="text-left">
+                  <h3 className="text-xl font-bold text-white leading-tight">
+                    IA Treinada<br />
+                    Especificamente para<br />
+                    Seu Negócio
+                  </h3>
+                </div>
+              </div>
+              <p className="text-gray-300 leading-relaxed text-sm mb-6">
+                Nossa IA aprende sobre <strong className="text-red-400">seus produtos, serviços, linguagem e clientes</strong>. 
+                Resultado: respostas precisas, vendas qualificadas e atendimento humano com eficiência de máquina.
               </p>
-              <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <div className="grid md:grid-cols-3 gap-6 mt-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-red-400 mb-1">20s</div>
-                  <div className="text-sm text-gray-400">Resposta personalizada</div>
+                  <div className="text-xl font-bold text-red-400 mb-1">20s</div>
+                  <div className="text-xs text-gray-400">Resposta personalizada</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-400 mb-1">100%</div>
-                  <div className="text-sm text-gray-400">Adaptada ao seu setor</div>
+                  <div className="text-xl font-bold text-blue-400 mb-1">100%</div>
+                  <div className="text-xs text-gray-400">Adaptada ao seu setor</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-400 mb-1">24/7</div>
-                  <div className="text-sm text-gray-400">Sempre aprendendo</div>
+                  <div className="text-xl font-bold text-green-400 mb-1">24/7</div>
+                  <div className="text-xs text-gray-400">Sempre aprendendo</div>
                 </div>
               </div>
             </div>
@@ -240,7 +249,7 @@ export default function Home() {
               Modelo de <span className="text-red-500">Receita</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Investimento que se paga em menos de 30 dias com o aumento de vendas
+              Ambos os serviços são obrigatórios para garantir o sucesso da sua automação
             </p>
           </div>
           
@@ -251,7 +260,7 @@ export default function Home() {
                   color: "red",
                   title: "Setup Inicial",
                   price: "R$ 2.997",
-                  description: "Implementação completa em 30 dias (Taxa Única)",
+                  description: "Primeira etapa: Implementação completa em 30 dias (Taxa única)",
                   features: ["Chatbot WhatsApp configurado", "Social Studio implementado", "Dashboard personalizado", "Treinamento da equipe", "Suporte durante implementação"],
                   popular: false
                 },
@@ -259,8 +268,8 @@ export default function Home() {
                   icon: "fas fa-sync",
                   color: "green",
                   title: "Assinatura Mensal",
-                  price: "R$ 897",
-                  description: "Manutenção e evolução contínua (Recorrente)",
+                  price: "R$ 749",
+                  description: "Segunda etapa: Manutenção contínua (Mensal)",
                   features: ["Suporte técnico 24/7", "Atualizações automáticas", "Relatórios mensais", "Otimizações de IA", "Novas funcionalidades"],
                   popular: true
               }
@@ -294,6 +303,45 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+          
+          {/* Modelo Obrigatório Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-center mt-12"
+          >
+            <div className="bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 max-w-2xl mx-auto">
+              <div className="flex items-center justify-center mb-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mr-3">
+                  <i className="fas fa-info text-white text-sm"></i>
+                </div>
+                <h3 className="text-lg font-bold text-white">
+                  Modelo Completo
+                </h3>
+              </div>
+              <p className="text-gray-300 text-sm mb-4">
+                Nosso processo completo de automação inclui duas etapas essenciais. Após a implementação, apenas a mensalidade continua:
+              </p>
+                              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-red-400">R$ 2.997</div>
+                    <div className="text-gray-400">1ª Etapa: Setup Inicial</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-green-400">R$ 749</div>
+                    <div className="text-gray-400">2ª Etapa: Mensalidade</div>
+                  </div>
+                </div>
+                              <div className="mt-4 pt-4 border-t border-gray-700">
+                  <div className="text-center">
+                    <div className="text-xl font-bold text-white">Total: R$ 3.746</div>
+                    <div className="text-gray-400 text-xs">Investimento inicial (Setup + 1ª mensalidade)</div>
+                    <div className="text-green-400 text-xs mt-1">A partir do 2º mês: apenas R$ 749/mês</div>
+                  </div>
+                </div>
+            </div>
+          </motion.div>
           
           {/* CTA Button */}
           <motion.div
