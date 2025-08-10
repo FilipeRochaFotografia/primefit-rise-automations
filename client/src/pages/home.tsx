@@ -107,13 +107,13 @@ export default function Home() {
                 description: "Clientes esperando horas por respostas no WhatsApp, perdendo interesse e migrando para concorrência."
               },
               {
-                icon: "fas fa-turtle",
+                icon: "fas fa-snail",
                 color: "yellow",
                 title: "Campanhas Demoradas",
                 description: "Criação de conteúdo manual consome dias quando deveria levar minutos para publicar."
               },
               {
-                icon: "fas fa-unlink",
+                icon: "fas fa-exclamation-triangle",
                 color: "orange",
                 title: "Falta de Integração",
                 description: "Sistemas isolados gerando retrabalho e dificultando a visão completa do negócio."
