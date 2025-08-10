@@ -102,6 +102,15 @@
     font-family: var(--font-outfit);
   }
   
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
   .animate-glow {
     animation: glow 2s ease-in-out infinite alternate;
   }

@@ -248,12 +248,6 @@ export function ProblemCardsGrid() {
       solution: "Automação inteligente que libera sua equipe para focar em vendas e relacionamento"
     },
     {
-      title: "Experiência Ruim",
-      description: "Clientes ficam frustrados com respostas lentas e impessoais",
-      icon: "fas fa-user-times",
-      solution: "Atendimento instantâneo e personalizado que aumenta a satisfação do cliente"
-    },
-    {
       title: "Custos Altos",
       description: "Manter equipe de atendimento 24/7 é caro e ineficiente",
       icon: "fas fa-dollar-sign",
@@ -262,7 +256,7 @@ export function ProblemCardsGrid() {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {problems.map((problem, index) => (
         <motion.div
           key={index}

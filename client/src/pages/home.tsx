@@ -150,20 +150,26 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="relative">
+            {/* Carousel Container */}
+            <div className="overflow-x-auto scrollbar-hide">
+              <div className="flex gap-6 pb-4" style={{ minWidth: 'max-content' }}>
             {[
               { icon: "fas fa-store", title: "E-commerce", desc: "Suplementos, roupas, eletrônicos" },
               { icon: "fas fa-user-md", title: "Clínicas", desc: "Médicas, estéticas, odontológicas" },
               { icon: "fas fa-graduation-cap", title: "Educação", desc: "Cursos, consultorias, coaching" },
               { icon: "fas fa-home", title: "Imobiliárias", desc: "Vendas, locações, administração" },
-              { icon: "fas fa-car", title: "Serviços", desc: "Oficinas, salões, restaurantes" }
+                  { icon: "fas fa-car", title: "Serviços", desc: "Oficinas, salões, restaurantes" },
+                  { icon: "fas fa-briefcase", title: "Consultoria", desc: "Empresarial, financeira, estratégica" },
+                  { icon: "fas fa-utensils", title: "Restaurantes", desc: "Delivery, cardápio, pedidos" },
+                  { icon: "fas fa-dumbbell", title: "Academias", desc: "Treinos, suplementos, personal" }
             ].map((sector, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 text-center hover:bg-red-500/10 hover:border-red-500/30 transition-all duration-300 group"
+                    className="min-w-[280px] bg-gray-900/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 text-center hover:bg-red-500/10 hover:border-red-500/30 transition-all duration-300 group"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <i className={`${sector.icon} text-white text-2xl`}></i>
@@ -173,6 +179,38 @@ export default function Home() {
                 <div className="mt-3 text-xs text-green-400 font-medium">✓ IA Personalizada</div>
               </motion.div>
             ))}
+              </div>
+            </div>
+            
+            {/* Navigation Dots */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {[...Array(8)].map((_, index) => (
+                <motion.button
+                  key={index}
+                  className="w-3 h-3 rounded-full bg-gray-600 hover:bg-red-500 transition-colors duration-300"
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                />
+              ))}
+            </div>
+            
+            {/* Scroll Indicator */}
+            <div className="text-center mt-4">
+              <motion.div
+                className="inline-flex items-center text-gray-400 text-sm"
+                animate={{
+                  x: [0, 10, 0]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <span>Deslize para ver mais setores</span>
+                <i className="fas fa-arrow-right ml-2"></i>
+              </motion.div>
+            </div>
           </div>
           
           <motion.div 
@@ -249,15 +287,6 @@ export default function Home() {
                   description: "Manutenção e evolução contínua (Recorrente)",
                   features: ["Suporte técnico 24/7", "Atualizações automáticas", "Relatórios mensais", "Otimizações de IA", "Novas funcionalidades"],
                   popular: true
-                },
-              {
-                icon: "fas fa-crown",
-                color: "blue",
-                title: "Serviços Premium",
-                price: "Sob consulta",
-                description: "Desenvolvimento personalizado",
-                features: ["Integrações customizadas", "IA treinada especificamente", "Consultoria para seu setor", "Automações sob medida", "Suporte dedicado"],
-                popular: false
               }
             ].map((plan, index) => (
               <motion.div
@@ -298,22 +327,59 @@ export default function Home() {
             className="text-center mt-16"
           >
             <motion.button
-              className="px-16 py-6 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold rounded-2xl text-2xl transition-all duration-300 relative overflow-hidden group shadow-2xl shadow-red-500/25"
+              className="px-12 py-4 bg-gradient-to-r from-red-600 via-red-700 to-red-800 hover:from-red-700 hover:via-red-800 hover:to-red-900 text-white font-bold rounded-2xl text-lg transition-all duration-300 relative overflow-hidden group shadow-xl shadow-red-500/20 border border-red-400/20"
               whileHover={{ 
-                scale: 1.05,
-                boxShadow: "0 20px 40px rgba(239, 68, 68, 0.4)"
+                scale: 1.02,
+                boxShadow: "0 15px 30px rgba(239, 68, 68, 0.3)"
               }}
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.98 }}
             >
+              {/* Shimmer Effect */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
                 initial={{ x: "-100%" }}
                 whileHover={{ x: "100%" }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.8 }}
               />
+              
+              {/* Glow Effect */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-red-400/10 via-red-500/5 to-red-400/10 rounded-2xl blur-sm"
+                animate={{
+                  opacity: [0.3, 0.6, 0.3]
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              
               <span className="relative z-10 flex items-center justify-center space-x-3">
-                <i className="fas fa-robot text-3xl"></i>
-                <span>Implemente IA na sua empresa</span>
+                <motion.div
+                  className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm"
+                  whileHover={{ 
+                    rotate: 360,
+                    scale: 1.1
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <i className="fas fa-robot text-white text-sm"></i>
+                </motion.div>
+                <span className="font-semibold">Implemente IA na sua empresa</span>
+                <motion.div
+                  className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center"
+                  animate={{
+                    x: [0, 3, 0]
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  <i className="fas fa-arrow-right text-white text-xs"></i>
+                </motion.div>
               </span>
             </motion.button>
           </motion.div>
