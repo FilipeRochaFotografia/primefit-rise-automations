@@ -3,7 +3,7 @@
 ## 📊 Status Geral: ✅ CONCLUÍDO - Fase 1 (Atualizado)
 
 ### 🎯 Objetivo Alcançado
-Landing page moderna e dinâmica com todas as funcionalidades solicitadas implementadas e funcionando perfeitamente. **Última atualização**: Seção Final CTA otimizada com design mais enxuto e vermelho mais escuro.
+Landing page moderna e dinâmica com todas as funcionalidades solicitadas implementadas e funcionando perfeitamente. **Última atualização**: Modelos de receita reformulados e todas as seções otimizadas.
 
 ## ✅ Implementações Concluídas
 
@@ -96,6 +96,10 @@ Landing page moderna e dinâmica com todas as funcionalidades solicitadas implem
 - [x] Espaçamentos e margens otimizados
 - [x] Botão CTA com vermelho mais escuro (red-700)
 - [x] Efeitos de fundo simplificados para design mais limpo
+- [x] Cards do Case PrimeFit reduzidos para melhor proporção
+- [x] Seção IA Treinada otimizada com texto 20% menor
+- [x] Cards da seção "O Problema é Real" reduzidos
+- [x] Layout da seção IA Treinada aprimorado com ícone pink
 
 #### **ProblemCard3D** ✅
 - [x] Animação de flip 3D corrigida
@@ -105,8 +109,12 @@ Landing page moderna e dinâmica com todas as funcionalidades solicitadas implem
 - [x] Problema de inversão no flip resolvido
 
 ### 💰 **Seção de Preços**
-- [x] Tamanho aumentado conforme solicitado
-- [x] Detalhamento de taxas (única vs recorrente)
+- [x] Modelos de receita reformulados: Setup R$ 2.997 + Mensalidade R$ 749
+- [x] Linguagem de processo: "Primeira etapa" e "Segunda etapa"
+- [x] Seção "Modelo Completo" explicativa adicionada
+- [x] Clareza sobre pagamento: após implementação segue apenas mensalidade
+- [x] Total inicial: R$ 3.746 (Setup + 1ª mensalidade)
+- [x] Valor futuro: R$ 749/mês a partir do 2º mês
 - [x] Checkmarks verdes nas funcionalidades
 - [x] Preços e descrições otimizados
 

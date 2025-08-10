@@ -1,7 +1,7 @@
 # Resumo de Execução - DarkSpark
 
 ## 🎯 Objetivo Alcançado
-Transformação completa da landing page do DarkSpark em uma experiência moderna, dinâmica e altamente interativa, com todas as funcionalidades solicitadas implementadas com sucesso. **Última atualização**: Seção Final CTA otimizada com design mais enxuto e vermelho mais escuro.
+Transformação completa da landing page do DarkSpark em uma experiência moderna, dinâmica e altamente interativa, com todas as funcionalidades solicitadas implementadas com sucesso. **Última atualização**: Modelos de receita reformulados e todas as seções otimizadas.
 
 ## 📋 Solicitações do Usuário e Status
 
@@ -85,10 +85,18 @@ Transformação completa da landing page do DarkSpark em uma experiência modern
 - [x] **"essa sessão deve ser menor, mais enxuta e o vermelho deve ser um pouco mais escuro"** - Seção otimizada
 - [x] **"Sua empresa pronta para o futuro Transforme sua empresa hoje mesmo com Inteligência Artificial e automações."** - Texto atualizado
 
-#### **13. Dashboard Personalizado** (NOVO)
+#### **13. Otimizações Gerais** (NOVO)
+- [x] **"diminua um pouco o tamanho dos 3 cards na sessão o problema é real"** - Cards reduzidos
+- [x] **"Agora vamos diminuir os cards do Case Primefit"** - Cards do Case PrimeFit otimizados
+- [x] **"melhore a sessão da IA Treinada... o texto pode ser 20% menor"** - Seção IA Treinada otimizada
+- [x] **"melhore o layout"** - Layout da seção IA Treinada aprimorado
+- [x] **"vamos reformular os modelos de receita"** - Modelos de receita reformulados
+- [x] **"deixe claro que a partir da implentação segue só a mensalidade"** - Clareza sobre pagamento implementada
+
+#### **14. Dashboard Personalizado** (NOVO)
 - [x] **"antes do Dashboard escreva algo como Dashboard Personalizado"** - Título adicionado
 
-#### **14. Melhorias Visuais** (NOVO)
+#### **15. Melhorias Visuais** (NOVO)
 - [x] **"tire o fundo esfumaçado do titulo modelo de receita resultados esperados"** - Fundos esfumaçados removidos
 - [x] **"nao é no fundo é nas palavras Receita Esperados"** - Efeito glow-text removido das palavras
 - [x] **"commit push"** - Alterações commitadas e enviadas para o repositório
@@ -160,6 +168,15 @@ Transformação completa da landing page do DarkSpark em uma experiência modern
 - ✅ Efeitos de fundo simplificados
 - ✅ Texto atualizado: "Sua empresa pronta para o futuro"
 - ✅ Parágrafo simplificado: "Transforme sua empresa hoje mesmo com Inteligência Artificial e automações"
+
+#### **Modelos de Receita Reformulados** (NOVO)
+- ✅ Setup Inicial: R$ 2.997 (Taxa única)
+- ✅ Assinatura Mensal: R$ 749 (Mensal)
+- ✅ Linguagem de processo: "Primeira etapa" e "Segunda etapa"
+- ✅ Seção "Modelo Completo" explicativa
+- ✅ Total inicial: R$ 3.746 (Setup + 1ª mensalidade)
+- ✅ Valor futuro: R$ 749/mês a partir do 2º mês
+- ✅ Clareza sobre pagamento após implementação
 
 #### **Dashboard Personalizado** (NOVO)
 - ✅ Título "Dashboard Personalizado" adicionado antes do componente
