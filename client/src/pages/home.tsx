@@ -529,14 +529,13 @@ export default function Home() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="py-16 relative bg-gradient-to-br from-red-900 via-red-800 to-red-700 overflow-hidden"
+        className="py-12 relative bg-gradient-to-br from-red-950 via-red-900 to-red-800 overflow-hidden"
       >
         {/* Background Effects */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-900/50 to-transparent" />
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-600/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-yellow-400/10 rounded-full blur-2xl" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-950/50 to-transparent" />
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-red-800/20 rounded-full blur-2xl animate-pulse" />
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-red-700/20 rounded-full blur-2xl animate-pulse" />
         </div>
         
         <div className="container mx-auto px-6 text-center relative z-10">
@@ -544,36 +543,27 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl lg:text-6xl font-black mb-6 text-white"
+            className="text-3xl lg:text-5xl font-black mb-4 text-white"
           >
-            Sua empresa pronta para o <span className="text-yellow-300">futuro</span>
+            Sua empresa pronta<br />para o <span className="text-yellow-300">futuro</span>
           </motion.h2>
-          <motion.h3 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-xl lg:text-2xl font-bold mb-6 text-red-100"
-          >
-            com IA e automação inteligente
-          </motion.h3>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg lg:text-xl text-red-100 mb-10 max-w-3xl mx-auto leading-relaxed"
+            className="text-base lg:text-lg text-red-100 mb-8 max-w-2xl mx-auto leading-relaxed"
           >
-            Não fique para trás enquanto seus concorrentes automatizam e crescem. 
-            Transforme sua empresa hoje mesmo com a tecnologia que já comprovou resultados.
+            Transforme sua empresa hoje mesmo com Inteligência Artificial e automações.
           </motion.p>
           
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex justify-center items-center mb-12"
+            className="flex justify-center items-center mb-8"
           >
-            <Button className="bg-white text-red-600 hover:bg-gray-100 px-16 py-6 rounded-2xl font-black text-xl transition-all duration-300 hover:shadow-2xl hover:scale-105 shadow-2xl shadow-red-900/50">
-              <i className="fas fa-rocket mr-4 text-red-600"></i>
+            <Button className="bg-white text-red-700 hover:bg-gray-100 px-12 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:shadow-xl hover:scale-105 shadow-lg shadow-red-900/30">
+              <i className="fas fa-rocket mr-3 text-red-700"></i>
               Implementar Agora
             </Button>
           </motion.div>
@@ -582,19 +572,19 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+            className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-black text-yellow-300 mb-2">30 dias</div>
-              <p className="text-red-100 text-base font-medium">Implementação completa</p>
+              <div className="text-2xl lg:text-3xl font-black text-yellow-300 mb-1">30 dias</div>
+              <p className="text-red-100 text-sm font-medium">Implementação completa</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-black text-yellow-300 mb-2">ROI 300%</div>
-              <p className="text-red-100 text-base font-medium">Retorno comprovado</p>
+              <div className="text-2xl lg:text-3xl font-black text-yellow-300 mb-1">ROI 300%</div>
+              <p className="text-red-100 text-sm font-medium">Retorno comprovado</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-black text-yellow-300 mb-2">24/7</div>
-              <p className="text-red-100 text-base font-medium">Suporte garantido</p>
+              <div className="text-2xl lg:text-3xl font-black text-yellow-300 mb-1">24/7</div>
+              <p className="text-red-100 text-sm font-medium">Suporte garantido</p>
             </div>
           </motion.div>
         </div>
